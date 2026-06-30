@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-30T14:24:36 IST" name="Default suite" finished-at="2026-06-30T14:29:59 IST" duration-ms="323401">
+    <groups>
+    </groups>
+    <test started-at="2026-06-30T14:24:36 IST" name="Default test" finished-at="2026-06-30T14:29:59 IST" duration-ms="323401">
+      <class name="ophc.Sprint_1">
+        <test-method signature="DoctorRegistrationTest()[pri:1, instance:ophc.Sprint_1@c730b35]" started-at="2026-06-30T14:24:36 IST" name="DoctorRegistrationTest" finished-at="2026-06-30T14:27:43 IST" duration-ms="187469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DoctorRegistrationTest -->
+        <test-method signature="LoginToAdminAndApproveNewlyAddedDoctorTest()[pri:2, instance:ophc.Sprint_1@c730b35]" started-at="2026-06-30T14:27:43 IST" name="LoginToAdminAndApproveNewlyAddedDoctorTest" finished-at="2026-06-30T14:28:19 IST" duration-ms="35475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginToAdminAndApproveNewlyAddedDoctorTest -->
+        <test-method signature="rejectedDoctorReSubmitingDocumentsTest()[pri:3, instance:ophc.Sprint_1@c730b35]" started-at="2026-06-30T14:28:19 IST" name="rejectedDoctorReSubmitingDocumentsTest" finished-at="2026-06-30T14:29:27 IST" duration-ms="67952" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- rejectedDoctorReSubmitingDocumentsTest -->
+        <test-method signature="AdminApprovingDoctorAfterReuploadingDocs()[pri:4, instance:ophc.Sprint_1@c730b35]" started-at="2026-06-30T14:29:27 IST" name="AdminApprovingDoctorAfterReuploadingDocs" finished-at="2026-06-30T14:29:45 IST" duration-ms="18591" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AdminApprovingDoctorAfterReuploadingDocs -->
+        <test-method signature="loginToDoctorPannelTest()[pri:5, instance:ophc.Sprint_1@c730b35]" started-at="2026-06-30T14:29:45 IST" name="loginToDoctorPannelTest" finished-at="2026-06-30T14:29:59 IST" duration-ms="13867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToDoctorPannelTest -->
+      </class> <!-- ophc.Sprint_1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

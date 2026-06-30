@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="classes" name="Failed suite [OPHCSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="classes" name="RegressionTest(failed)">
+    <classes>
+      <class name="Doctor.Registration">
+        <methods>
+          <include name="DoctorRegistration"/>
+        </methods>
+      </class> <!-- Doctor.Registration -->
+      <class name="Admin.LoginToAdminAndApproveNewlyAddedDoctor">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="AdminApproveNewlyAddedDoctorr"/>
+        </methods>
+      </class> <!-- Admin.LoginToAdminAndApproveNewlyAddedDoctor -->
+    </classes>
+  </test> <!-- RegressionTest(failed) -->
+</suite> <!-- Failed suite [OPHCSuite] -->
