@@ -137,6 +137,83 @@ public class RegisterPage {
 				Thread.sleep(2000);
 				PhoneEdt.sendKeys(jUtil.getRandomMobileNum());
 				Thread.sleep(2000);
+				SameAsMobileNumberCheckBox.click();
+				Thread.sleep(2000);
+				TermsAndConditionsCheckBox.click();
+				Thread.sleep(2000);
+				SignUpBtn.click();
+			}
+		} catch (Exception e) {
+				Thread.sleep(1000);
+		}
+		
+		
+	}
+	
+	
+	public void RegisterToDoctorApplicationNegative(WebDriver driver) throws Exception
+	{
+		WebDriverUtility wUtil = new WebDriverUtility();
+		JavaUtility jUtil = new JavaUtility();
+		
+		String FullName = jUtil.getRandomSingleName();
+		String Email    = FullName+"@gmail.com";
+		String PhoneNumber = jUtil.getRandomMobileNum();
+		
+		//System.out.println(Name+" Doctor Registering to the App");
+		Thread.sleep(2000);
+		FullNameEdt.sendKeys(FullName);
+		Thread.sleep(2000);
+		EmailEdt.sendKeys(Email);
+		Thread.sleep(2000);
+		PhoneEdt.sendKeys(PhoneNumber);
+		Thread.sleep(2000);
+		SameAsMobileNumberCheckBox.click();
+		Thread.sleep(2000);
+		TermsAndConditionsCheckBox.click();
+		Thread.sleep(2000);
+		try {
+			if(SignUpBtn.isDisplayed())
+			{
+				
+				FullNameEdt.clear();
+				Thread.sleep(2000);
+				wUtil.takeScreenShot(driver, "SignUp without FullName Error");
+				FullNameEdt.sendKeys("i");
+				Thread.sleep(2000);
+				wUtil.takeScreenShot(driver, "SignUp with Single Letter as FullName Error");
+				FullNameEdt.clear();
+				Thread.sleep(2000);
+				FullNameEdt.sendKeys(FullName);
+				Thread.sleep(2000);
+				EmailEdt.clear();
+				Thread.sleep(2000);
+				wUtil.takeScreenShot(driver, "SignUp without Email Error");
+				Thread.sleep(2000);
+				EmailEdt.sendKeys(FullName);
+				Thread.sleep(2000);
+				wUtil.takeScreenShot(driver, "SignUp without @gmail.com extension Email Error");
+				Thread.sleep(2000);
+				EmailEdt.clear();
+				Thread.sleep(2000);
+				EmailEdt.sendKeys(Email);
+				Thread.sleep(2000);
+				PhoneEdt.clear();
+				Thread.sleep(2000);
+				wUtil.takeScreenShot(driver, "SignUp without Phone Number Error");
+				Thread.sleep(2000);
+				PhoneEdt.sendKeys("89745");
+				Thread.sleep(2000);
+				wUtil.takeScreenShot(driver, "SignUp with 5digits as Phone Number Error");
+				Thread.sleep(2000);
+				PhoneEdt.sendKeys(jUtil.getRandomMobileNum());
+				Thread.sleep(2000);
+				SameAsMobileNumberCheckBox.click();
+				Thread.sleep(2000);
+				wUtil.takeScreenShot(driver, "SignUp without Whatsapp Number Error");
+				Thread.sleep(2000);
+				SameAsMobileNumberCheckBox.click();
+				Thread.sleep(2000);
 				SignUpBtn.click();
 			}
 		} catch (Exception e) {

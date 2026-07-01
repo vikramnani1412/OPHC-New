@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ophc.Sprint_1">
+      <class name="ophc.Sprint_2_Negative">
         <methods>
-          <include name="rejectedDoctorReSubmitingDocumentsTest"/>
+          <include name="registerPageNegativeTest"/>
         </methods>
-      </class> <!-- ophc.Sprint_1 -->
+      </class> <!-- ophc.Sprint_2_Negative -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

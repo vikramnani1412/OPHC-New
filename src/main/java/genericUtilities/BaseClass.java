@@ -38,7 +38,7 @@ public class BaseClass {
 		public void bcConfig() throws Exception
 		{
 			String BROWSER = pUtility.readDataFromPropertyFile("browser");
-			String URL = pUtility.readDataFromPropertyFile("url");
+			String URL = pUtility.readDataFromPropertyFile("doctorurl");
 			
 			if(BROWSER.equalsIgnoreCase("Chrome"))
 			{

@@ -325,4 +325,5 @@ public class JavaUtility {
     public String getTodaysDate() {
         return LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
+    
 }

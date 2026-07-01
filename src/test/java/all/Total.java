@@ -118,7 +118,7 @@ public class Total {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get(doctorURL);
 
-        wUtil.takeScreenShot(driver, "Login Page");
+//        wUtil.takeScreenShot(driver, "Login Page");
         System.out.println("Registration Started");
         System.out.println("Doctor Name : " + DataStore.doctorName);
 

@@ -190,6 +190,24 @@ public class WebDriverUtility {
 		r.keyPress(KeyEvent.VK_ENTER);
 		r.keyRelease(KeyEvent.VK_ENTER);
 	}
+	
+	/**
+	 * This method will press and release Backspace key.
+	 * NOTE: java.awt.Robot operates at OS level, requires window focus, and
+	 * does not work in headless browser mode. Prefer element.sendKeys(Keys.ENTER)
+	 * where possible.
+	 * @throws AWTException
+	 * @throws Exception 
+	 */
+	public void pressBackspaceKeyThreeTimes() throws Exception {
+		Robot r = new Robot();
+		for(int i=1;i<=3;i++)
+		{
+			Thread.sleep(2000);
+			r.keyPress(KeyEvent.VK_BACK_SPACE);
+			r.keyRelease(KeyEvent.VK_BACK_SPACE);
+		}
+	}
 
 	/**
 	 * This method will handle frame based on index

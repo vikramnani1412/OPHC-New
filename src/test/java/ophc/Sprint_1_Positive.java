@@ -27,7 +27,7 @@ import genericUtilities.PropertyFileUtility;
 import genericUtilities.WebDriverUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Sprint_1 {
+public class Sprint_1_Positive {
 
     WebDriverUtility    wUtil = new WebDriverUtility();
     JavaUtility         jUtil = new JavaUtility();
