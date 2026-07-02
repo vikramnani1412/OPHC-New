@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import doctorObjectRepository.ApplicationFormPage;
 import doctorObjectRepository.LoginPage;
 import doctorObjectRepository.RegisterPage;
 import doctorObjectRepository.VerifyCodePage;
@@ -26,12 +27,41 @@ public class Sprint_2_Negative {
     ExcelFileUtility    eUtil = new ExcelFileUtility();
     PropertyFileUtility pUtil = new PropertyFileUtility();
     
+    String doctorURL;
+    String adminURL;
+    String adminUsername;
+    String adminPassword;
+
+    String fakeName;
+    String firstName;
+    String mobileNumber;
+
+    String imagePath;
+    String medicalCertificate;
+    String nmcCertificate;
+    String aadhar;
+    String pan;
+    String experience;
+    String affiliationProof;
+
+    String firstRating;
+    String consultancyFee;
+    String editFirstRating;
+    String editConsultancyFee;
+    String finalRating;
+    String reasonForRejection;
+
+    int doctorNumber = 1;
+    
 	@Test
 	public void registerPageNegativeTest() throws Exception
 	{
     	String doctorURL = pUtil.readDataFromPropertyFile("doctorurl");
     	
+    	String Name = "abcfhg";
+    	
     	String MobileNumber = eUtil.readDataFromExcel("Doctor", 21, 1);
+    	imagePath = eUtil.readDataFromExcel("Doctor", 4,  1);
     	
 		WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
@@ -56,6 +86,9 @@ public class Sprint_2_Negative {
         
         VerifyCodePage vcPage = new VerifyCodePage(driver);
         vcPage.enteringOtpAndClickOnVerifyBtnNegative(driver);
+        
+        ApplicationFormPage afPage = new ApplicationFormPage(driver);
+        afPage.UploadDoctorDetailsNegative(driver, imagePath, Name);
         
 	}
 	

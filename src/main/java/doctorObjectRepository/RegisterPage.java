@@ -35,7 +35,22 @@ public class RegisterPage {
     @FindBy(xpath="//div[.=' An account with this email already exists. Please login.']")private WebElement AccountExistMsgTxt;
     
     @FindBy(xpath="//span[.=' Close ']")private WebElement CloseBtn;
-  
+    
+    @FindBy(xpath="//label[.=' Full Name ']/following-sibling::div[.=' Full Name is required ']")private WebElement FullNameError;
+    
+    @FindBy(xpath="//label[.=' Email Address ']/following-sibling::div[.='Email is required']")private WebElement EmailRequiredError;
+    
+    @FindBy(xpath="//label[.=' Email Address ']/following-sibling::div[.='Invalid email format']")private WebElement InvalidEmailError;
+    
+    @FindBy(xpath="//label[.=' Phone Number ']/following-sibling::div[.=' Phone number is required ']")private WebElement PhoneNumberRequiredError;
+    
+    @FindBy(xpath="//label[.=' Phone Number ']/following-sibling::div[.=' Please enter a valid 10-digit phone number ']")private WebElement ValidPhoneNumberError;
+    
+    
+    
+    @FindBy(xpath="//div[.=' You must agree to the terms and privacy policies ']")private WebElement TermsNdConditionsError;
+    
+    
 	//Rule-3:Create a constructor to initilise these elements    
     
 	public RegisterPage(WebDriver driver)
@@ -92,6 +107,36 @@ public class RegisterPage {
 
 	public WebElement getCloseBtn() {
 		return CloseBtn;
+	}
+
+
+	public WebElement getFullNameError() {
+		return FullNameError;
+	}
+
+
+	public WebElement getEmailRequiredError() {
+		return EmailRequiredError;
+	}
+
+
+	public WebElement getInvalidEmailError() {
+		return InvalidEmailError;
+	}
+
+
+	public WebElement getPhoneNumberRequiredError() {
+		return PhoneNumberRequiredError;
+	}
+
+
+	public WebElement getValidPhoneNumberError() {
+		return ValidPhoneNumberError;
+	}
+
+
+	public WebElement getTermsNdConditionsError() {
+		return TermsNdConditionsError;
 	}
 
 
@@ -178,21 +223,47 @@ public class RegisterPage {
 				
 				FullNameEdt.clear();
 				Thread.sleep(2000);
-				wUtil.takeScreenShot(driver, "SignUp without FullName Error");
+				if(SignUpBtn.isDisplayed())
+				{
+					wUtil.takeScreenShot(driver, "SignUp without FullName Error");
+				}
+				else {
+					wUtil.takeScreenShot(driver, "Accepted without FullName");
+				}
+				Thread.sleep(1000);
 				FullNameEdt.sendKeys("i");
 				Thread.sleep(2000);
-				wUtil.takeScreenShot(driver, "SignUp with Single Letter as FullName Error");
+				if(SignUpBtn.isDisplayed())
+				{
+					wUtil.takeScreenShot(driver, "SignUp with Single Letter as FullName Error");
+				}
+				else {
+					wUtil.takeScreenShot(driver, "Accepted Single letter as FullName");
+				}
+				Thread.sleep(1000);
 				FullNameEdt.clear();
 				Thread.sleep(2000);
 				FullNameEdt.sendKeys(FullName);
 				Thread.sleep(2000);
 				EmailEdt.clear();
 				Thread.sleep(2000);
-				wUtil.takeScreenShot(driver, "SignUp without Email Error");
+				if(SignUpBtn.isDisplayed())
+				{
+					wUtil.takeScreenShot(driver, "SignUp without Email Error");
+				}
+				else {
+					wUtil.takeScreenShot(driver, "Accepted without Email");
+				}
 				Thread.sleep(2000);
 				EmailEdt.sendKeys(FullName);
 				Thread.sleep(2000);
-				wUtil.takeScreenShot(driver, "SignUp without @gmail.com extension Email Error");
+				if(SignUpBtn.isDisplayed())
+				{
+					wUtil.takeScreenShot(driver, "SignUp with Invalid Email Error");
+				}
+				else {
+					wUtil.takeScreenShot(driver, "Accepted Invalid Email");
+				}
 				Thread.sleep(2000);
 				EmailEdt.clear();
 				Thread.sleep(2000);
@@ -200,19 +271,51 @@ public class RegisterPage {
 				Thread.sleep(2000);
 				PhoneEdt.clear();
 				Thread.sleep(2000);
-				wUtil.takeScreenShot(driver, "SignUp without Phone Number Error");
-				Thread.sleep(2000);
+				if(SignUpBtn.isDisplayed())
+				{
+					wUtil.takeScreenShot(driver, "SignUp without Phone Number Error");
+				}
+				else {
+					wUtil.takeScreenShot(driver, "Accepted Without PhoneNumber");
+				}
+				Thread.sleep(1000);
 				PhoneEdt.sendKeys("89745");
-				Thread.sleep(2000);
-				wUtil.takeScreenShot(driver, "SignUp with 5digits as Phone Number Error");
+				Thread.sleep(1000);
+				if(SignUpBtn.isDisplayed())
+				{
+					wUtil.takeScreenShot(driver, "SignUp with Invalid Phone Number Error");
+				}
+				else {
+					wUtil.takeScreenShot(driver, "Accepted Invalid Phone Number");
+				}
+				Thread.sleep(1000);
+				PhoneEdt.clear();
 				Thread.sleep(2000);
 				PhoneEdt.sendKeys(jUtil.getRandomMobileNum());
 				Thread.sleep(2000);
 				SameAsMobileNumberCheckBox.click();
-				Thread.sleep(2000);
-				wUtil.takeScreenShot(driver, "SignUp without Whatsapp Number Error");
+				Thread.sleep(1000);
+				if(SignUpBtn.isDisplayed())
+				{
+					wUtil.takeScreenShot(driver, "SignUp without Whatsapp Number Error");
+				}
+				else {
+					wUtil.takeScreenShot(driver, "Accepted without whatsapp Number");
+				}
 				Thread.sleep(2000);
 				SameAsMobileNumberCheckBox.click();
+				Thread.sleep(2000);
+				TermsAndConditionsCheckBox.click();
+				Thread.sleep(1000);
+				if(SignUpBtn.isDisplayed())
+				{
+					wUtil.takeScreenShot(driver, "SignUp without Agreeing Terms and Conditions Error");
+				}
+				else {
+					wUtil.takeScreenShot(driver, "Accepted without Agreeing Terms and Conditions");
+				}
+				Thread.sleep(2000);
+				TermsAndConditionsCheckBox.click();
 				Thread.sleep(2000);
 				SignUpBtn.click();
 			}

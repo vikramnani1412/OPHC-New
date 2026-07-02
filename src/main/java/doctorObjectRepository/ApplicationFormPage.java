@@ -42,7 +42,14 @@ public class ApplicationFormPage {
   
     @FindBy(xpath="//div[.=' Submit ']")private WebElement SubmitBtn;
     
-//    @FindBy(xpath="//a[.=' Login ']")private WebElement LoginLnk;
+    @FindBy(xpath="//span[.=' Close ']")private WebElement NegativeCloseBtn;
+    
+//    @FindBy(xpath="//h6[.='After (AI Enhanced)']/following-sibling::img")private WebElement AiImage;
+    
+    @FindBy(xpath="//div[.=' NMC Number must be at least 5 characters ']")private WebElement NMCMoreThanFiveCharsError;
+    
+    @FindBy(xpath="//div[.=' NMC Number is required ']")private WebElement NMCnumberRequiredError;
+  
   
 	//Rule-3:Create a constructor to initilise these elements    
     
@@ -91,6 +98,11 @@ public class ApplicationFormPage {
 		return ExperianceDrpDwn;
 	}
 
+	public WebElement getNegativeCloseBtn() {
+		return NegativeCloseBtn;
+	}
+
+
 	public WebElement getQualificationDrpdwn() {
 		return QualificationDrpdwn;
 	}
@@ -105,6 +117,16 @@ public class ApplicationFormPage {
 
 	public WebElement getCurrentHospitalOrClinicEdt() {
 		return CurrentHospitalOrClinicEdt;
+	}
+
+
+	public WebElement getNMCMoreThanFiveCharsError() {
+		return NMCMoreThanFiveCharsError;
+	}
+
+
+	public WebElement getNMCnumberRequiredError() {
+		return NMCnumberRequiredError;
 	}
 
 
@@ -157,7 +179,7 @@ public class ApplicationFormPage {
     	
     	QualificationDrpdwn.click();
     	Thread.sleep(2000);
-    	driver.findElement(By.xpath("//li[.=' MS - Robotic Surgery ']")).click();
+    	driver.findElement(By.xpath("//li[.=' DNB ']")).click();
     	
     	StateCouncilDrpdwn.click();
     	Thread.sleep(2000);
@@ -182,7 +204,157 @@ public class ApplicationFormPage {
     		SubmitBtn.click();
     		Thread.sleep(2000);
     	}
-    	
     	    
     }
+   	
+   	public void UploadDoctorDetailsNegative(WebDriver driver, String ImagePath, String Name) throws Exception
+   	{
+   		WebDriverUtility wUtil = new WebDriverUtility();
+    	JavaUtility jUtil = new JavaUtility();
+    	
+        driver.findElement(By.xpath("//button[.='Choose File']")).click();
+        
+        Thread.sleep(2000);
+        
+        driver.findElement(By.xpath("//input[@type='file']")).sendKeys(ImagePath);
+        
+        Thread.sleep(2000);
+    	
+    	wUtil.clickOnEscapeButton();
+		
+    	Thread.sleep(2000);
+    	
+    	wUtil.scrollToParticularWebElement(driver, DrProfileNameScrolling);
+    	
+    	Thread.sleep(2000);
+    	
+    	String str = String.valueOf(jUtil.getRandomNum());
+    	
+    	NmcNumberEdt.sendKeys(str);
+    	
+    	Thread.sleep(2000);
+    	    	
+    	SpecializationDrpdwn.click();
+    	Thread.sleep(2000);
+    	driver.findElement(By.xpath("//li[.=' Emergency Medicine ']")).click();
+    	
+    	ExperianceDrpDwn.click();
+    	Thread.sleep(2000);
+    	driver.findElement(By.xpath("//li[.=' 3 years ']")).click();
+    	
+    	QualificationDrpdwn.click();
+    	Thread.sleep(2000);
+    	driver.findElement(By.xpath("//li[.=' DNB ']")).click();
+    	
+    	StateCouncilDrpdwn.click();
+    	Thread.sleep(2000);
+    	driver.findElement(By.xpath("//li[.=' Uttarakhand Medical Council (UKMC) ']")).click();
+    	
+    	YearOfAdmissionDrpdwn.click();
+    	Thread.sleep(2000);
+    	driver.findElement(By.xpath("//li[.=' 2023 ']")).click();
+    	
+    	Thread.sleep(2000);
+    	CurrentHospitalOrClinicEdt.sendKeys("abcdef");
+    	Thread.sleep(2000);
+    	
+    	wUtil.scrollPageUp(2);
+    	wUtil.waitUntilElementVisibleUptoThirtyMin(driver, AiImage);
+    	if(AiImage.isDisplayed())
+    	{
+    		Thread.sleep(2000);
+    		wUtil.scrollPageDown(2);
+    		Thread.sleep(2000);
+    		wUtil.waitUntilElementVisibleUptoThirtyMin(driver, SubmitBtn);
+    		System.out.println("All Details Uploaded and Submit Btn Displays.. From Now Negative Flow Starts");
+    	    Thread.sleep(2000);
+    	    
+    	    Thread.sleep(2000);
+    	    FullNameEdt.clear();
+    	    
+    	    Thread.sleep(2000);
+    	    SubmitBtn.click();
+    	    Thread.sleep(1000);
+    	    
+    	    if(NegativeCloseBtn.isDisplayed())
+    	    {
+    	    	wUtil.takeScreenShot(driver, "All Details Required Error Message");
+    	    }
+    	    else 
+    	    {
+				System.out.println("Accepted without Full name");
+			}
+    	    
+    	    Thread.sleep(1000);
+    	    FullNameEdt.sendKeys(Name);
+    	    Thread.sleep(2000);
+    	    
+    	    NmcNumberEdt.clear();
+    	    Thread.sleep(1000);
+    	    SubmitBtn.click();
+    	    Thread.sleep(2000);
+    	    
+    	    if(NegativeCloseBtn.isDisplayed())
+    	    {
+    	    	wUtil.takeScreenShot(driver, "NMC number Required Error");
+    	    }
+    	    else
+    	    {
+    	    	wUtil.takeScreenShot(driver, "Accepted without NMC Number");
+    	    }
+    	    
+    	    Thread.sleep(2000);
+    	    NmcNumberEdt.sendKeys("123");
+    	    Thread.sleep(1000);
+    	    
+    	    if(NMCMoreThanFiveCharsError.isDisplayed())
+    	    {
+    	    	wUtil.takeScreenShot(driver, "NMC number Must be more than 5 Numbers Error");
+    	    }
+    	    else
+    	    {
+    	    	wUtil.takeScreenShot(driver, "Accepted Wrong NMC Number");
+    	    }
+    	    
+    	    Thread.sleep(2000);
+        	String strr = String.valueOf(jUtil.getRandomNum());
+        	NmcNumberEdt.sendKeys(strr);
+        	Thread.sleep(2000);
+        	    	
+//        	SpecializationDrpdwn.click();
+//        	Thread.sleep(2000);
+//        	driver.findElement(By.xpath("//li[.=' Emergency Medicine ']")).click();
+//        	
+//        	ExperianceDrpDwn.click();
+//        	Thread.sleep(2000);
+//        	driver.findElement(By.xpath("//li[.=' 3 years ']")).click();
+//        	
+//        	QualificationDrpdwn.click();
+//        	Thread.sleep(2000);
+//        	driver.findElement(By.xpath("//li[.=' DNB ']")).click();
+//        	
+//        	StateCouncilDrpdwn.click();
+//        	Thread.sleep(2000);
+//        	driver.findElement(By.xpath("//li[.=' Uttarakhand Medical Council (UKMC) ']")).click();
+//        	
+//        	YearOfAdmissionDrpdwn.click();
+//        	Thread.sleep(2000);
+//        	driver.findElement(By.xpath("//li[.=' 2023 ']")).click();
+//        	
+//        	Thread.sleep(2000);
+//        	CurrentHospitalOrClinicEdt.sendKeys("abcdef");
+//        	Thread.sleep(2000);
+//        	
+//        	wUtil.scrollPageUp(2);
+//        	wUtil.waitUntilElementVisibleUptoThirtyMin(driver, AiImage);
+//        	if(AiImage.isDisplayed())
+//        	{
+//        		Thread.sleep(2000);
+//        		wUtil.scrollPageDown(2);
+//        		Thread.sleep(2000);
+//        		wUtil.waitUntilElementVisibleUptoThirtyMin(driver, SubmitBtn);
+//        	}
+    	}
+    	
+   	}
 }
