@@ -24,27 +24,35 @@ public class ApplicationFormPage {
     
     @FindBy(xpath="//input[@formcontrolname='fullName']")private WebElement FullNameEdt;
     
-    @FindBy(xpath="//input[@formcontrolname='nmcNumber']")private WebElement NmcNumberEdt;
+    @FindBy(xpath="//input[@formcontrolname='stateMedicalCouncilNumber']")private WebElement StateMedicalCouncilRegistrationNoEdt;
     
-    @FindBy(xpath="//div[@class='custom-dropdown']/div[.=' Select Specialization ']")private WebElement SpecializationDrpdwn;
+    @FindBy(xpath="//input[@formcontrolname='nmcNumber']")private WebElement NmcNumberEdt;
     
     @FindBy(xpath="//div[@class='custom-dropdown']/div[.=' Select Experience ']")private WebElement ExperianceDrpDwn;
     
+    @FindBy(xpath="//label[.=' Post Graduation Degree ']/following-sibling::div/div[.=' Select PG ']")private WebElement PgDrpDwn;
+    
+    @FindBy(xpath="//div[@class='custom-dropdown']/div[.=' Select Specialization ']")private WebElement SpecializationDrpdwn;
+    
+    @FindBy(xpath="//label[.=' Super Specialization Degree ']/following-sibling::div/div[.=' Select Super Specialisty Qualification ']")private WebElement SuperSpecialistyQualificationDwn;
+    
+    @FindBy(xpath="//label[.=' Super Specialization ']/following-sibling::div/div[.=' Select Super Specialization ']")private WebElement SuperSpecializationDrpdwn;
+    
     @FindBy(xpath="//div[@class='custom-dropdown']/div[.=' Select Qualification ']")private WebElement QualificationDrpdwn;
     
-    @FindBy(xpath="//div[@class='custom-dropdown']/div[.=' Select State Council ']")private WebElement StateCouncilDrpdwn;
+    @FindBy(xpath="//label[.=' Languages Spoken ']/following-sibling::div/div[.=' Select Languages ']")private WebElement LanguagesDrpdwn;
     
     @FindBy(xpath="//div[@class='custom-dropdown']/div[.=' Select Year ']")private WebElement YearOfAdmissionDrpdwn;
     
     @FindBy(xpath="//input[@formcontrolname='hospital']")private WebElement CurrentHospitalOrClinicEdt;
     
+    @FindBy(xpath="//textarea[@placeholder='Enter about yourself...']")private WebElement AboutYourselfTextarea;
+  
     @FindBy(xpath="//h6[.='After (AI Enhanced)']/following-sibling::img")private WebElement AiImage;
   
     @FindBy(xpath="//div[.=' Submit ']")private WebElement SubmitBtn;
     
     @FindBy(xpath="//span[.=' Close ']")private WebElement NegativeCloseBtn;
-    
-//    @FindBy(xpath="//h6[.='After (AI Enhanced)']/following-sibling::img")private WebElement AiImage;
     
     @FindBy(xpath="//div[.=' NMC Number must be at least 5 characters ']")private WebElement NMCMoreThanFiveCharsError;
     
@@ -107,9 +115,6 @@ public class ApplicationFormPage {
 		return QualificationDrpdwn;
 	}
 
-	public WebElement getStateCouncilDrpdwn() {
-		return StateCouncilDrpdwn;
-	}
 
 	public WebElement getYearOfAdmissionDrpdwn() {
 		return YearOfAdmissionDrpdwn;
