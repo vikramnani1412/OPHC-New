@@ -92,7 +92,7 @@ public class Registration {
 
         
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
 
 //        driver.findElement(By.xpath("//button[.='Choose File']")).click();
 //        
@@ -239,7 +239,7 @@ public class Registration {
         Thread.sleep(1000);
         
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
         
         Thread.sleep(1000);
         
@@ -374,7 +374,7 @@ public class Registration {
         lPage.loginToDoctor(DataStore.mobileNumber);
         
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
         
         WelcomePage wPage = new WelcomePage(driver);
         wPage.DoctorAddingSlot(driver);

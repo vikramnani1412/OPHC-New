@@ -110,7 +110,7 @@ public class Sample {
         rPage.RegisterToDoctorApplication(driver, fakeName, fakeName + "@gmail.com", mobileNumber);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
 
         ApplicationFormPage afPage = new ApplicationFormPage(driver);
         afPage.uploadDoctorDetails(driver, imagePath);
@@ -216,7 +216,7 @@ public class Sample {
         Thread.sleep(1000);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
         Thread.sleep(1000);
 
         WebElement profileRejectMsg = driver.findElement(By.xpath("//p[.='Your Profile is Rejected']"));
@@ -303,7 +303,7 @@ public class Sample {
 
         Thread.sleep(2000);
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
 
         Thread.sleep(2000);
         WelcomePage wPage = new WelcomePage(driver);

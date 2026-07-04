@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -81,6 +82,11 @@ public class Sprint_1_Positive {
         DataStore.email        = firstName + "@gmail.com";
 
         WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
+
+        options.addArguments("--headless");
+        options.addArguments("--disable-notifications");
+        options.addArguments("--incognito");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -99,7 +105,7 @@ public class Sprint_1_Positive {
         rPage.RegisterToDoctorApplication(driver, fakeName, fakeName + "@gmail.com", mobileNumber);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
 
         ApplicationFormPage afPage = new ApplicationFormPage(driver);
         afPage.uploadDoctorDetails(driver, imagePath);
@@ -186,7 +192,16 @@ public class Sprint_1_Positive {
         affiliationProof   = eUtil.readDataFromExcel("Doctor", 10, 1);
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        
+        ChromeOptions options = new ChromeOptions();
+
+        // Disable browser notifications
+        options.addArguments("--disable-notifications");
+
+        // Start browser maximized
+        options.addArguments("--start-maximized");
+        
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get(doctorURL);
@@ -197,7 +212,7 @@ public class Sprint_1_Positive {
         lPage.loginToDoctor(DataStore.mobileNumber);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
 
         WebElement profileRejectMsg = driver.findElement(By.xpath("//p[.='Your Profile is Rejected']"));
         if (profileRejectMsg.isDisplayed()) {
@@ -276,7 +291,7 @@ public class Sprint_1_Positive {
         lPage.loginToDoctor(DataStore.mobileNumber);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
 
         driver.quit();
     }

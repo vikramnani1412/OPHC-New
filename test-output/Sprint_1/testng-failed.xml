@@ -6,12 +6,12 @@
   </listeners>
   <test thread-count="1" parallel="tests" name="Test(failed)">
     <classes>
-      <class name="ophc.Sprint_1">
+      <class name="ophc.Sprint_1_Positive">
         <methods>
-          <include name="DoctorRegistrationTest"/>
           <include name="rejectedDoctorReSubmitingDocumentsTest"/>
+          <include name="AdminApprovingDoctorAfterReuploadingDocs"/>
         </methods>
-      </class> <!-- ophc.Sprint_1 -->
+      </class> <!-- ophc.Sprint_1_Positive -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Sprint_1] -->

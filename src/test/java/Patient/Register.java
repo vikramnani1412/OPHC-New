@@ -50,7 +50,7 @@ public class Register {
         lPage.loginToDoctor(PHONENUMBER);
         
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
         
         WelcomePage wPage = new WelcomePage(driver);
         wPage.DoctorAddingSlot(driver);

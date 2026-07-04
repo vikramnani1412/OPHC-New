@@ -95,18 +95,9 @@ public class Sprint_2_Negative {
         ApplicationFormPage afPage = new ApplicationFormPage(driver);
         afPage.UploadDoctorDetailsNegative(driver, imagePath, Name);
         
+        
+        
 	}
 	
 }
-/*
- * ChromeOptions options = new ChromeOptions();
-        Map<String, Object> prefs = new HashMap<>();
-        // Block notifications
-        prefs.put("profile.default_content_setting_values.notifications", 2);
-        options.setExperimentalOption("prefs", prefs);
-        
-		WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver(options);
- * 
- * */
  

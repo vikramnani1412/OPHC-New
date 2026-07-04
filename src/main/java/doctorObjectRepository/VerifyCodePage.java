@@ -4,6 +4,7 @@ import java.security.PublicKey;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
@@ -50,13 +51,21 @@ public class VerifyCodePage {
 	}
 	
 	//Business Library
-	public void enteringOtpAndClickOnVerifyBtn() throws Exception
+	public void enteringOtpAndClickOnVerifyBtn(WebDriver driver) throws Exception
 	{
 		Thread.sleep(2000);
 		OtpFirstBox.sendKeys("123456");
 		Thread.sleep(2000);
-		VerifyBtn.click();
-		Thread.sleep(2000);
+		
+		Actions action = new Actions(driver);
+
+		action.moveToElement(VerifyBtn)
+		      .click()
+		      .build()
+		      .perform();
+		
+//		VerifyBtn.click();
+//		Thread.sleep(2000);
 	}
 	
 	

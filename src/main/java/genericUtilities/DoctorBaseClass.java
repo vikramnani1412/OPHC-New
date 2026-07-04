@@ -88,7 +88,7 @@ public class DoctorBaseClass {
         lPage.loginToDoctor(MOBILE_NUMBER);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
         System.out.println("Doctor Login Successful");
     }
 

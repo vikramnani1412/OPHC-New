@@ -220,14 +220,14 @@ public class RegisterPage {
 		try {
 			if(SignUpBtn.isDisplayed())
 			{
-				
 				FullNameEdt.clear();
 				Thread.sleep(2000);
 				if(SignUpBtn.isDisplayed())
 				{
 					wUtil.takeScreenShot(driver, "SignUp without FullName Error");
 				}
-				else {
+				else 
+				{
 					wUtil.takeScreenShot(driver, "Accepted without FullName");
 				}
 				Thread.sleep(1000);

@@ -133,7 +133,7 @@ public class Total {
         System.out.println(fakeName + "  " + mobileNumber);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
 
         ApplicationFormPage afPage = new ApplicationFormPage(driver);
         afPage.uploadDoctorDetails(driver, imagePath);
@@ -244,7 +244,7 @@ public class Total {
         Thread.sleep(1000);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
         Thread.sleep(1000);
 
         WebElement profileRejectMsg = driver.findElement(
@@ -335,7 +335,7 @@ public class Total {
         Thread.sleep(2000);
 
         VerifyCodePage vcPage = new VerifyCodePage(driver);
-        vcPage.enteringOtpAndClickOnVerifyBtn();
+        vcPage.enteringOtpAndClickOnVerifyBtn(driver);
         Thread.sleep(2000);
 
         WelcomePage wPage = new WelcomePage(driver);
