@@ -247,6 +247,10 @@ public class ApplicationFormPage {
     	QualificationEdt.sendKeys("MBBS");
     	Thread.sleep(2000);
     	
+//    	wUtil.scrollToParticularWebElement(driver, ExpertiseEdt);
+    	wUtil.scrollPageDown(1);
+    	
+    	Thread.sleep(2000);
     	LanguagesDrpdwn.click();
     	Thread.sleep(1000);
     	driver.findElement(By.xpath("//li[.=' English ']")).click();
@@ -263,19 +267,26 @@ public class ApplicationFormPage {
     	ExpertiseEdt.sendKeys("Neurosurgery");
     	Thread.sleep(2000);
     	
+    	wUtil.scrollToParticularWebElement(driver, AboutYourselfTextarea);
+    	
+        Thread.sleep(2000);
     	AboutYourselfTextarea.sendKeys(AboutYourself);
     	
-    	wUtil.scrollPageUp(2);
-    	wUtil.waitUntilElementVisibleUptoThirtyMin(driver, AiImage);
-    	if(AiImage.isDisplayed())
-    	{
-    		Thread.sleep(2000);
-    		wUtil.scrollPageDown(3);
-    		Thread.sleep(2000);
-    		wUtil.waitUntilElementVisibleUptoThirtyMin(driver, SubmitBtn);
-    		SubmitBtn.click();
-    		Thread.sleep(2000);
-    	}
+    	Thread.sleep(2000);
+		wUtil.waitUntilElementVisibleUptoThirtyMin(driver, SubmitBtn);
+		SubmitBtn.click();
+    	
+//    	wUtil.scrollPageUp(2);
+//    	wUtil.waitUntilElementVisibleUptoThirtyMin(driver, AiImage);
+//    	if(AiImage.isDisplayed())
+//    	{
+//    		Thread.sleep(2000);
+//    		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
+//    		Thread.sleep(2000);
+//    		wUtil.waitUntilElementVisibleUptoThirtyMin(driver, SubmitBtn);
+//    		SubmitBtn.click();
+//    		Thread.sleep(2000);
+//    	}
     	    
     }
    	
@@ -340,6 +351,8 @@ public class ApplicationFormPage {
     	QualificationEdt.sendKeys("MBBS");
     	Thread.sleep(2000);
     	
+    	wUtil.scrollPageDown(1);
+    	
     	LanguagesDrpdwn.click();
     	Thread.sleep(1000);
     	driver.findElement(By.xpath("//li[.=' English ']")).click();
@@ -380,10 +393,8 @@ public class ApplicationFormPage {
     		Thread.sleep(1000);
     		if(SubmitBtn.isDisplayed())
     		{
-    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving ABOUT YOURSELF TEXT");
+    			wUtil.takeScreenShot(driver, "L_Submit Button Disabled without giving ABOUT YOURSELF TEXT");
     		}
-    		Thread.sleep(2000);
-    		AboutYourselfTextarea.sendKeys(AboutYourself);
     		Thread.sleep(2000);
     		wUtil.scrollToParticularWebElement(driver, ExpertiseEdt);
     		ExpertiseEdt.clear();
@@ -394,7 +405,7 @@ public class ApplicationFormPage {
     		Thread.sleep(1000);
     		if(SubmitBtn.isDisplayed())
     		{
-    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving Expertise");
+    			wUtil.takeScreenShot(driver, "M_Submit Button Disabled without giving Expertise");
     		}
     		Thread.sleep(2000);
     		ExpertiseEdt.sendKeys("Neurosurgery");
@@ -407,7 +418,7 @@ public class ApplicationFormPage {
     		Thread.sleep(1000);
     		if(SubmitBtn.isDisplayed())
     		{
-    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving Current Hospital Or Clinic Name");
+    			wUtil.takeScreenShot(driver, "N_Submit Button Disabled without giving Current Hospital Or Clinic Name");
     		}
     		Thread.sleep(2000);
         	CurrentHospitalOrClinicEdt.sendKeys("abcdef");
@@ -422,7 +433,7 @@ public class ApplicationFormPage {
     		Thread.sleep(2000);
     		if(SubmitBtn.isDisplayed())
     		{
-    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving Qualification");
+    			wUtil.takeScreenShot(driver, "O_Submit Button Disabled without giving Qualification");
     		}
     		Thread.sleep(2000);
     		wUtil.scrollToParticularWebElement(driver, QualificationEdt);
@@ -439,7 +450,7 @@ public class ApplicationFormPage {
     		Thread.sleep(2000);
     		if(SubmitBtn.isDisplayed())
     		{
-    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving NMC Number");
+    			wUtil.takeScreenShot(driver, "P_Submit Button Disabled without giving NMC Number");
     		}
     		Thread.sleep(2000);
     		wUtil.scrollToParticularWebElement(driver, NmcNumberEdt);
@@ -456,7 +467,7 @@ public class ApplicationFormPage {
     		Thread.sleep(2000);
     		if(SubmitBtn.isDisplayed())
     		{
-    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving State Medical Council Registration Number");
+    			wUtil.takeScreenShot(driver, "Q_Submit Button Disabled without giving State Medical Council Registration Number");
     		}
     		Thread.sleep(2000);
     		wUtil.scrollToParticularWebElement(driver, StateMedicalCouncilRegistrationNoEdt);
@@ -465,10 +476,17 @@ public class ApplicationFormPage {
     		Thread.sleep(2000);
     		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
     		Thread.sleep(2000);
+    		AboutYourselfTextarea.sendKeys(AboutYourself);
+    		Thread.sleep(2000);
+    		if(SubmitBtn.isDisplayed())
+    		{
+    			wUtil.takeScreenShot(driver, "R_Submit Button Displayed After All Details Giving");
+    		}
+    		Thread.sleep(2000);
     		SubmitBtn.click();
 		} catch (Exception e) 
     	{
-			
+			System.out.println("Application Form Page Not Displayed");
 		}
     	
     	

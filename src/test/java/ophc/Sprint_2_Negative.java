@@ -64,10 +64,17 @@ public class Sprint_2_Negative {
     	String MobileNumber = eUtil.readDataFromExcel("Doctor", 21, 1);
     	imagePath = eUtil.readDataFromExcel("Doctor", 4,  1);
     	
-    	ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
-        options.addArguments("--incognito");
+    	
+    	
+    	
 		WebDriverManager.chromedriver().setup();
+		ChromeOptions options = new ChromeOptions();
+
+        // Disable browser notifications
+        options.addArguments("--disable-notifications");
+
+        // Start browser maximized
+        options.addArguments("--start-maximized");
         WebDriver driver = new ChromeDriver(options);
         
         driver.manage().window().maximize();
@@ -80,7 +87,7 @@ public class Sprint_2_Negative {
         LoginPage lPage = new LoginPage(driver);
         lPage.getEmailOrPhoneEdt().sendKeys(MobileNumber, Keys.ENTER);
         Thread.sleep(1000);
-        wUtil.takeScreenShot(driver, "Login with Un-Registered Mobile Number Error");
+        wUtil.takeScreenShot(driver, "A_Login with Un-Registered Mobile Number Error");
         
         Thread.sleep(2000);
         wUtil.waitForElementToBeClickable(driver, lPage.getRegisterLnk());

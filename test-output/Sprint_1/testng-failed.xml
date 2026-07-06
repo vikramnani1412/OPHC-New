@@ -8,7 +8,9 @@
     <classes>
       <class name="ophc.Sprint_1_Positive">
         <methods>
+          <include name="LoginToAdminAndApproveNewlyAddedDoctorTest"/>
           <include name="rejectedDoctorReSubmitingDocumentsTest"/>
+          <include name="loginToDoctorPannelTest"/>
           <include name="AdminApprovingDoctorAfterReuploadingDocs"/>
         </methods>
       </class> <!-- ophc.Sprint_1_Positive -->

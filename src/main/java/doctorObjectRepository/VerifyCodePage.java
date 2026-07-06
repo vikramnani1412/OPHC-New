@@ -77,10 +77,10 @@ public class VerifyCodePage {
 		Thread.sleep(2000);
 		OtpFirstBox.sendKeys("");
 		Thread.sleep(2000);
-		wUtil.takeScreenShot(driver, "Without Entering OTP Verify Button Disabled");
+		wUtil.takeScreenShot(driver, "J_Without Entering OTP Verify Button Disabled");
 		OtpFirstBox.sendKeys("123");
 		Thread.sleep(2000);
-		wUtil.takeScreenShot(driver, "Entering OTP 3 digit OTP Verify Button Disabled");
+		wUtil.takeScreenShot(driver, "K_Entering OTP 3 digit OTP Verify Button Disabled");
 		Thread.sleep(2000);
 		wUtil.pressBackspaceKeyThreeTimes();
 		Thread.sleep(2000);

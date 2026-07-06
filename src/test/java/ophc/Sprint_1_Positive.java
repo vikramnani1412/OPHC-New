@@ -84,10 +84,12 @@ public class Sprint_1_Positive {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
 
-        options.addArguments("--headless");
+        // Disable browser notifications
         options.addArguments("--disable-notifications");
-        options.addArguments("--incognito");
-        WebDriver driver = new ChromeDriver();
+
+        // Start browser maximized
+        options.addArguments("--start-maximized");
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get(doctorURL);
@@ -151,7 +153,15 @@ public class Sprint_1_Positive {
         reasonForRejection = eUtil.readDataFromExcel("Doctor", 3,  3);
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+        // Disable browser notifications
+        options.addArguments("--disable-notifications");
+
+        // Start browser maximized
+        options.addArguments("--start-maximized");
+        
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get(adminURL);
@@ -253,7 +263,15 @@ public class Sprint_1_Positive {
         finalRating        = eUtil.readDataFromExcel("Doctor", 16, 2);
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+        // Disable browser notifications
+        options.addArguments("--disable-notifications");
+
+        // Start browser maximized
+        options.addArguments("--start-maximized");
+        
+        WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get(adminURL);
@@ -282,7 +300,15 @@ public class Sprint_1_Positive {
         doctorURL = pUtil.readDataFromPropertyFile("doctorurl");
 
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+
+        // Disable browser notifications
+        options.addArguments("--disable-notifications");
+
+        // Start browser maximized
+        options.addArguments("--start-maximized");
+        
+        WebDriver driver = new ChromeDriver(options);
         driver.get(doctorURL);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -293,6 +319,8 @@ public class Sprint_1_Positive {
         VerifyCodePage vcPage = new VerifyCodePage(driver);
         vcPage.enteringOtpAndClickOnVerifyBtn(driver);
 
+        Thread.sleep(5000);
+        
         driver.quit();
     }
 }

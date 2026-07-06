@@ -1,5 +1,8 @@
 package doctorObjectRepository;
 
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -204,6 +207,7 @@ public class RegisterPage {
 		String FullName = jUtil.getRandomSingleName();
 		String Email    = FullName+"@gmail.com";
 		String PhoneNumber = jUtil.getRandomMobileNum();
+		int n = jUtil.getRandomNum();
 		
 		//System.out.println(Name+" Doctor Registering to the App");
 		Thread.sleep(2000);
@@ -220,25 +224,35 @@ public class RegisterPage {
 		try {
 			if(SignUpBtn.isDisplayed())
 			{
+				FullNameEdt.click();
+				Robot r = new Robot();
+				for(int i=1;i<=10;i++)
+				{
+					Thread.sleep(1000);
+					r.keyPress(KeyEvent.VK_BACK_SPACE);
+					r.keyRelease(KeyEvent.VK_BACK_SPACE);
+				}
+				
+				
 				FullNameEdt.clear();
 				Thread.sleep(2000);
 				if(SignUpBtn.isDisplayed())
 				{
-					wUtil.takeScreenShot(driver, "SignUp without FullName Error");
+					wUtil.takeScreenShot(driver, "B_SignUp without FullName Error");
 				}
 				else 
 				{
-					wUtil.takeScreenShot(driver, "Accepted without FullName");
+					wUtil.takeScreenShot(driver, "B_Accepted without FullName");
 				}
 				Thread.sleep(1000);
 				FullNameEdt.sendKeys("i");
 				Thread.sleep(2000);
 				if(SignUpBtn.isDisplayed())
 				{
-					wUtil.takeScreenShot(driver, "SignUp with Single Letter as FullName Error");
+					wUtil.takeScreenShot(driver, "C_SignUp with Single Letter as FullName Error");
 				}
 				else {
-					wUtil.takeScreenShot(driver, "Accepted Single letter as FullName");
+					wUtil.takeScreenShot(driver, "C_Accepted Single letter as FullName");
 				}
 				Thread.sleep(1000);
 				FullNameEdt.clear();
@@ -249,20 +263,20 @@ public class RegisterPage {
 				Thread.sleep(2000);
 				if(SignUpBtn.isDisplayed())
 				{
-					wUtil.takeScreenShot(driver, "SignUp without Email Error");
+					wUtil.takeScreenShot(driver, "D_SignUp without Email Error");
 				}
 				else {
-					wUtil.takeScreenShot(driver, "Accepted without Email");
+					wUtil.takeScreenShot(driver, "D_Accepted without Email");
 				}
 				Thread.sleep(2000);
 				EmailEdt.sendKeys(FullName);
 				Thread.sleep(2000);
 				if(SignUpBtn.isDisplayed())
 				{
-					wUtil.takeScreenShot(driver, "SignUp with Invalid Email Error");
+					wUtil.takeScreenShot(driver, "E_SignUp with Invalid Email Error");
 				}
 				else {
-					wUtil.takeScreenShot(driver, "Accepted Invalid Email");
+					wUtil.takeScreenShot(driver, "E_Accepted Invalid Email");
 				}
 				Thread.sleep(2000);
 				EmailEdt.clear();
@@ -273,20 +287,20 @@ public class RegisterPage {
 				Thread.sleep(2000);
 				if(SignUpBtn.isDisplayed())
 				{
-					wUtil.takeScreenShot(driver, "SignUp without Phone Number Error");
+					wUtil.takeScreenShot(driver, "F_SignUp without Phone Number Error");
 				}
 				else {
-					wUtil.takeScreenShot(driver, "Accepted Without PhoneNumber");
+					wUtil.takeScreenShot(driver, "F_Accepted Without PhoneNumber");
 				}
 				Thread.sleep(1000);
 				PhoneEdt.sendKeys("89745");
 				Thread.sleep(1000);
 				if(SignUpBtn.isDisplayed())
 				{
-					wUtil.takeScreenShot(driver, "SignUp with Invalid Phone Number Error");
+					wUtil.takeScreenShot(driver, "G_SignUp with Invalid Phone Number Error");
 				}
 				else {
-					wUtil.takeScreenShot(driver, "Accepted Invalid Phone Number");
+					wUtil.takeScreenShot(driver, "G_Accepted Invalid Phone Number");
 				}
 				Thread.sleep(1000);
 				PhoneEdt.clear();
@@ -297,10 +311,10 @@ public class RegisterPage {
 				Thread.sleep(1000);
 				if(SignUpBtn.isDisplayed())
 				{
-					wUtil.takeScreenShot(driver, "SignUp without Whatsapp Number Error");
+					wUtil.takeScreenShot(driver, "H_SignUp without Whatsapp Number Error");
 				}
 				else {
-					wUtil.takeScreenShot(driver, "Accepted without whatsapp Number");
+					wUtil.takeScreenShot(driver, "H_Accepted without whatsapp Number");
 				}
 				Thread.sleep(2000);
 				SameAsMobileNumberCheckBox.click();
@@ -309,15 +323,33 @@ public class RegisterPage {
 				Thread.sleep(1000);
 				if(SignUpBtn.isDisplayed())
 				{
-					wUtil.takeScreenShot(driver, "SignUp without Agreeing Terms and Conditions Error");
+					wUtil.takeScreenShot(driver, "I_SignUp without Agreeing Terms and Conditions Error");
 				}
 				else {
-					wUtil.takeScreenShot(driver, "Accepted without Agreeing Terms and Conditions");
+					wUtil.takeScreenShot(driver, "I_Accepted without Agreeing Terms and Conditions");
 				}
 				Thread.sleep(2000);
 				TermsAndConditionsCheckBox.click();
 				Thread.sleep(2000);
 				SignUpBtn.click();
+				Thread.sleep(2000);
+				
+				try {
+					if (CloseBtn.isDisplayed()) {
+						EmailEdt.clear();
+						String PhoneNumberr = jUtil.getRandomMobileNum();
+						String Emaill    = FullName+"yugugyu"+"@gmail.com";
+						Thread.sleep(2000);
+						EmailEdt.sendKeys(Emaill);
+						Thread.sleep(3000);
+						PhoneEdt.sendKeys(PhoneNumberr);
+						Thread.sleep(2000);
+						SignUpBtn.click();
+					}
+				} catch (Exception e) {
+					Thread.sleep(1000);
+				}
+				
 			}
 		} catch (Exception e) {
 				Thread.sleep(1000);
