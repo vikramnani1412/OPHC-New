@@ -363,7 +363,7 @@ public class ApplicationFormPage {
     	Thread.sleep(2000);
 //    	wUtil.scrollPageUp(2);
 //    	wUtil.waitUntilElementVisibleUptoThirtyMin(driver, AiImage);
-    	wUtil.waitUntilElementVisibleUptoThirtyMin(driver, SubmitBtn);
+    	wUtil.waitForElementToBeVisible(driver, SubmitBtn);
     	
     	try 
     	{
@@ -373,6 +373,11 @@ public class ApplicationFormPage {
         		System.out.println("Submit button Displayed");
         	}
     		AboutYourselfTextarea.clear();
+    		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
+    		Thread.sleep(1000);
+//    		SubmitBtn.click();
+    		Thread.sleep(1000);
     		if(SubmitBtn.isDisplayed())
     		{
     			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving ABOUT YOURSELF TEXT");
@@ -380,14 +385,87 @@ public class ApplicationFormPage {
     		Thread.sleep(2000);
     		AboutYourselfTextarea.sendKeys(AboutYourself);
     		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, ExpertiseEdt);
+    		ExpertiseEdt.clear();
     		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
+    		Thread.sleep(1000);
+//    		SubmitBtn.click();
+    		Thread.sleep(1000);
+    		if(SubmitBtn.isDisplayed())
+    		{
+    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving Expertise");
+    		}
     		Thread.sleep(2000);
+    		ExpertiseEdt.sendKeys("Neurosurgery");
+        	Thread.sleep(2000);
+        	CurrentHospitalOrClinicEdt.clear();
     		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
+    		Thread.sleep(1000);
+//    		SubmitBtn.click();
+    		Thread.sleep(1000);
+    		if(SubmitBtn.isDisplayed())
+    		{
+    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving Current Hospital Or Clinic Name");
+    		}
     		Thread.sleep(2000);
+        	CurrentHospitalOrClinicEdt.sendKeys("abcdef");
     		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, QualificationEdt);
+    		Thread.sleep(1000);
+    		QualificationEdt.clear();
     		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
     		Thread.sleep(2000);
+//    		SubmitBtn.click();
     		Thread.sleep(2000);
+    		if(SubmitBtn.isDisplayed())
+    		{
+    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving Qualification");
+    		}
+    		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, QualificationEdt);
+    		Thread.sleep(1000);
+    		QualificationEdt.sendKeys("MBBS");
+    		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, NmcNumberEdt);
+    		Thread.sleep(2000);
+    		NmcNumberEdt.clear();
+    		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
+    		Thread.sleep(2000);
+//    		SubmitBtn.click();
+    		Thread.sleep(2000);
+    		if(SubmitBtn.isDisplayed())
+    		{
+    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving NMC Number");
+    		}
+    		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, NmcNumberEdt);
+    		Thread.sleep(2000);
+    		NmcNumberEdt.sendKeys(nmcn);
+        	Thread.sleep(2000);
+        	wUtil.scrollToParticularWebElement(driver, StateMedicalCouncilRegistrationNoEdt);
+    		Thread.sleep(2000);
+    		StateMedicalCouncilRegistrationNoEdt.clear();
+    		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
+    		Thread.sleep(2000);
+//    		SubmitBtn.click();
+    		Thread.sleep(2000);
+    		if(SubmitBtn.isDisplayed())
+    		{
+    			wUtil.takeScreenShot(driver, "Submit Button Disabled without giving State Medical Council Registration Number");
+    		}
+    		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, StateMedicalCouncilRegistrationNoEdt);
+    		Thread.sleep(2000);
+    		StateMedicalCouncilRegistrationNoEdt.sendKeys(smcrn);
+    		Thread.sleep(2000);
+    		wUtil.scrollToParticularWebElement(driver, SubmitBtn);
+    		Thread.sleep(2000);
+    		SubmitBtn.click();
 		} catch (Exception e) 
     	{
 			
