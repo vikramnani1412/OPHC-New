@@ -3,6 +3,7 @@ package ophc;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 import doctorObjectRepository.ApplicationFormPage;
+import doctorObjectRepository.DocumentUploadPage;
 import doctorObjectRepository.LoginPage;
 import doctorObjectRepository.RegisterPage;
 import doctorObjectRepository.VerifyCodePage;
@@ -64,7 +66,12 @@ public class Sprint_2_Negative {
     	String MobileNumber = eUtil.readDataFromExcel("Doctor", 21, 1);
     	imagePath = eUtil.readDataFromExcel("Doctor", 4,  1);
     	
-    	
+    	medicalCertificate = eUtil.readDataFromExcel("Doctor", 5,  1);
+        nmcCertificate = eUtil.readDataFromExcel("Doctor", 6,  1);
+        aadhar = eUtil.readDataFromExcel("Doctor", 7,  1);
+        pan = eUtil.readDataFromExcel("Doctor", 8,  1);
+        experience = eUtil.readDataFromExcel("Doctor", 9,  1);
+        affiliationProof = eUtil.readDataFromExcel("Doctor", 10, 1);
     	
     	
 		WebDriverManager.chromedriver().setup();
@@ -102,10 +109,23 @@ public class Sprint_2_Negative {
         ApplicationFormPage afPage = new ApplicationFormPage(driver);
         afPage.UploadDoctorDetailsNegative(driver, imagePath, Name);
         
-        wUtil.scrollPageUp(1);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[.='Medical Degree  Certificate']/../preceding-sibling::input")).sendKeys(medicalCertificate);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[.='NMC / State Medical Council Certificate']/../preceding-sibling::input")).sendKeys(nmcCertificate);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[.='Aadhaar Card']/../preceding-sibling::input")).sendKeys(aadhar);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[.='PAN Card']/../preceding-sibling::input")).sendKeys(pan);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[.='Experience  Certificate']/../preceding-sibling::input")).sendKeys(experience);
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//span[.='Clinic / Hospital  Affiliation Proof']/../preceding-sibling::input")).sendKeys(affiliationProof);
         Thread.sleep(2000);
         
-        wUtil.takeScreenShot(driver, "Without Documents Uploading Submit Documents Btn is Disabled Error");
+        DocumentUploadPage duPage = new DocumentUploadPage(driver);
+        duPage.DocumentsUploadNegative(driver);
+        
         
         
         

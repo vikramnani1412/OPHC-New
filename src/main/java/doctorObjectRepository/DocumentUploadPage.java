@@ -6,23 +6,24 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import genericUtilities.ExcelFileUtility;
 import genericUtilities.WebDriverUtility;
 
 public class DocumentUploadPage {
 
 	//Finding WebElements Using @FindBy Annotations//span[.='Medical Degree Certificate']
 
-    @FindBy(xpath="(//img[@alt='upload'])[1]")private WebElement UploadMedicalDegreeCertificateIcon;
+    @FindBy(xpath="//span[.='Medical Degree  Certificate']/../preceding-sibling::input")private WebElement UploadMedicalDegreeCertificateIcon;
     //span[.='Medical Degree  Certificate']/../preceding-sibling::input[@type='file']
-    @FindBy(xpath="(//input[@type='file'])[2]")private WebElement UploadNMCOrStateMedicalCouncilCertificateIcon;
+    @FindBy(xpath="//span[.='NMC / State Medical Council Certificate']/../preceding-sibling::input")private WebElement UploadNMCOrStateMedicalCouncilCertificateIcon;
 	
-	@FindBy(xpath="(//input[@type='file'])[3]")private WebElement UploadAadhaarCardIcon;
+	@FindBy(xpath="//span[.='Aadhaar Card']/../preceding-sibling::input")private WebElement UploadAadhaarCardIcon;
 	
-    @FindBy(xpath="(//input[@type='file'])[4]")private WebElement UploadPanCardIcon;
+    @FindBy(xpath="//span[.='PAN Card']/../preceding-sibling::input")private WebElement UploadPanCardIcon;
 	
-    @FindBy(xpath="(//input[@type='file'])[5]")private WebElement UploadExperianceCertificateIcon;
+    @FindBy(xpath="//span[.='Experience  Certificate']/../preceding-sibling::input")private WebElement UploadExperianceCertificateIcon;
     
-    @FindBy(xpath="(//input[@type='file'])[6]")private WebElement UploadClinicOrHospitalAffiliationProofIcon;
+    @FindBy(xpath="//span[.='Clinic / Hospital  Affiliation Proof']/../preceding-sibling::input")private WebElement UploadClinicOrHospitalAffiliationProofIcon;
     
     @FindBy(xpath="//label[@for='terms']/preceding-sibling::input[@type='checkbox']")private WebElement TermsChckBox;
     
@@ -181,7 +182,69 @@ public class DocumentUploadPage {
 	    SubmitDocumentsBtn.click();
 	    Thread.sleep(2000);
 	    
+	    
 	}
 	
+	
+	public void DocumentsUploadNegative(WebDriver driver) throws Exception
+    {
+		WebDriverUtility wUtil = new WebDriverUtility();
+		ExcelFileUtility eUtil = new ExcelFileUtility();
+		
+		String medicalCertificate = eUtil.readDataFromExcel("Doctor", 5,  1);
+        String nmcCertificate = eUtil.readDataFromExcel("Doctor", 6,  1);
+        String aadhar = eUtil.readDataFromExcel("Doctor", 7,  1);
+        String pan = eUtil.readDataFromExcel("Doctor", 8,  1);
+        String experiance = eUtil.readDataFromExcel("Doctor", 9,  1);
+        String affiliationProof = eUtil.readDataFromExcel("Doctor", 10, 1);
+		
+		wUtil.scrollPageUp(1);
+        Thread.sleep(2000);
+        
+        wUtil.takeScreenShot(driver, "S_Without Documents Uploading Submit Documents Btn is Disabled Error");
+        Thread.sleep(2000);
+        
+        Thread.sleep(2000);
+	    wUtil.scrollPageUp(2);
+	    Thread.sleep(2000);
+//	    UploadMedicalDegreeCertificateIcon.click();
+//	    Thread.sleep(2000);
+//	    UploadMedicalDegreeCertificateIcon.sendKeys(medicalCertificate);
+//	    Thread.sleep(2000);
+//	    UploadNMCOrStateMedicalCouncilCertificateIcon.sendKeys(nmcCertificate);
+//	    Thread.sleep(2000);
+//	    UploadAadhaarCardIcon.sendKeys(aadhar);
+//	    Thread.sleep(2000);
+//	    UploadPanCardIcon.sendKeys(pan);
+//	    Thread.sleep(2000);
+//	    UploadExperianceCertificateIcon.sendKeys(experiance);
+//	    Thread.sleep(2000);
+//	    UploadClinicOrHospitalAffiliationProofIcon.sendKeys(affiliationProof);
+//	    Thread.sleep(2000);
+	    TermsChckBox.click();
+	    Thread.sleep(2000);
+	    GuidelinesChckbox.click();
+	    Thread.sleep(2000);
+	    wUtil.scrollPageDown(1);
+	    MedicalRegistrationChckbox.click();
+	    Thread.sleep(2000);
+	    IconsentChckbox.click();
+	    Thread.sleep(2000);
+	    try {
+	    	if (UploadFailedError.isDisplayed()) 
+		    {
+				driver.findElement(By.xpath("//span[.=' ✗ Upload failed ']/preceding-sibling::input[@type='file']")).sendKeys("C:\\Users\\Innovatiview\\Pictures\\A\\Aadhaar.png");
+			}
+		} catch (Exception e) {
+			Thread.sleep(10);
+		}
+	    
+	    wUtil.waitForElementToBeVisible(driver, SubmitDocumentsBtn);
+	    
+	    Thread.sleep(2000);
+        
+        
+        
+    }
 	
 }
