@@ -102,6 +102,12 @@ public class Sprint_2_Negative {
         ApplicationFormPage afPage = new ApplicationFormPage(driver);
         afPage.UploadDoctorDetailsNegative(driver, imagePath, Name);
         
+        wUtil.scrollPageUp(1);
+        Thread.sleep(2000);
+        
+        wUtil.takeScreenShot(driver, "Without Documents Uploading Submit Documents Btn is Disabled Error");
+        
+        
         
         
 	}
