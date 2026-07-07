@@ -106,6 +106,8 @@ public class Sprint_2_Negative {
         Thread.sleep(2000);
         
         wUtil.takeScreenShot(driver, "Without Documents Uploading Submit Documents Btn is Disabled Error");
+        Thread.sleep(2000);
+        
         
         
         
