@@ -2,6 +2,7 @@ package all;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import genericUtilities.JavaUtility;
@@ -17,6 +18,7 @@ import patientObjectRepository.RazorpayNetBankingPage;
 import patientObjectRepository.RazorpayOPHC;
 import patientObjectRepository.UploadMedicalReportsAfterAppointmentConfirmPage;
 
+@Listeners(genericUtilities.PatientListnersImplementationClass.class)
 public class PatientBookingSlot extends PatientBaseClass {
 
 	WebDriverUtility wUtil = new WebDriverUtility();
@@ -74,6 +76,9 @@ public class PatientBookingSlot extends PatientBaseClass {
 
         AppointmentsPage aPage = new AppointmentsPage(driver);
         aPage.checkingAppointmentBookedOrNot(BookingID);
+        Thread.sleep(2000);
+        
+        acPage.clickOnContinueBtn();
         Thread.sleep(2000);
 	}
 	

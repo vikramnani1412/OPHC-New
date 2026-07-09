@@ -7,11 +7,17 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AppointmentConfirmedPage {
 
-    //Rule-1: Finding WebElements Using @FindBy Annotations
-    
+    //Rule-1: Finding WebElements Using @FindBy Annotations	
+	
     @FindBy(xpath="//div[@class='booking-id-badge']")private WebElement BookingId;
     
-    @FindBy(xpath="//button[.=' Cancel Appointment ']")private WebElement CancelAppointmentBth;
+    @FindBy(xpath="//button[.='Upload Document ']")private WebElement UploadDocumentBtn;
+    
+    @FindBy(xpath="//button[.='Add Notes ']")private WebElement AddNotesBtn;
+    
+    @FindBy(xpath="//button[.=' Reschedule Appointment ']")private WebElement RescheduleAppointmentBtn;
+  
+    @FindBy(xpath="//button[.=' Cancel Appointment ']")private WebElement CancelAppointmentBtn;
     
     @FindBy(xpath="//button[.=' Need Help? ']")private WebElement NeedHelpBtn;
     
@@ -33,8 +39,23 @@ public class AppointmentConfirmedPage {
 	}
 
 
-	public WebElement getCancelAppointmentBth() {
-		return CancelAppointmentBth;
+	public WebElement getUploadDocumentBtn() {
+		return UploadDocumentBtn;
+	}
+
+
+	public WebElement getAddNotesBtn() {
+		return AddNotesBtn;
+	}
+
+
+	public WebElement getRescheduleAppointmentBtn() {
+		return RescheduleAppointmentBtn;
+	}
+
+
+	public WebElement getCancelAppointmentBtn() {
+		return CancelAppointmentBtn;
 	}
 
 
@@ -61,6 +82,12 @@ public class AppointmentConfirmedPage {
 	{
 		Thread.sleep(2000);
 		ContinueBtn.click();
+	}
+	
+	public void clickOnContinueBtn() throws Exception
+	{
+		Thread.sleep(2000);
+		clickOnContinueBtn();
 	}
 
 	

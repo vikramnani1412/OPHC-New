@@ -97,6 +97,46 @@ public class RazorpayNetBankingPage {
 		SBILnk.click();
 		Thread.sleep(2000);
         
+		try 
+		{
+			WebElement PaymentDeclined = driver.findElement(By.xpath("//div[.='Payment could not be completed']"));
+			if(PaymentDeclined.isDisplayed())
+			{
+				driver.findElement(By.xpath("//button[contains(@class,'absolute')]")).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//button[@title='Close Checkout']")).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//button[.='Yes, exit']")).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//h6[.='OPHC Wallet']")).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//button[.=' Continue ']")).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//h6[.='OPHC Wallet']")).click();
+				Thread.sleep(2000);
+				driver.findElement(By.xpath("//button[.=' Continue ']")).click();
+				Thread.sleep(2000);
+				
+			}
+		} 
+		catch (Exception e) 
+		{
+			String ParentWin = driver.getWindowHandle();
+			
+			Set<String> ChildWins = driver.getWindowHandles();
+			
+			for(String ChildWin : ChildWins)
+			{
+				if(!ChildWin.equals(ParentWin))
+				{
+				    driver.switchTo().window(ChildWin);
+				    driver.findElement(By.xpath("//button[.='Success']")).click();
+				}
+			}
+			
+			driver.switchTo().window(ParentWin);
+		}
+		
         String ParentWin = driver.getWindowHandle();
 		
 		Set<String> ChildWins = driver.getWindowHandles();

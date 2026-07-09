@@ -14,6 +14,17 @@
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- all.PatientBookingSlot -->
+      <class name="all.DoctorAddingSlot">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="doctorAddingSlot"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- all.DoctorAddingSlot -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [PatientBookingSlot] -->

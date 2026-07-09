@@ -1,52 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-09T16:13:30 IST" name="PatientBookingSlot" finished-at="2026-07-09T16:15:10 IST" duration-ms="99788">
+  <suite started-at="2026-07-09T18:25:32 IST" name="PatientBookingSlot" finished-at="2026-07-09T18:26:39 IST" duration-ms="66832">
     <groups>
     </groups>
-    <test started-at="2026-07-09T16:13:30 IST" name="Test" finished-at="2026-07-09T16:15:10 IST" duration-ms="99788">
+    <test started-at="2026-07-09T18:25:32 IST" name="Test" finished-at="2026-07-09T18:26:39 IST" duration-ms="66832">
       <class name="all.PatientBookingSlot">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:all.PatientBookingSlot@3c9754d8]" started-at="2026-07-09T16:13:30 IST" name="beforeSuite" finished-at="2026-07-09T16:13:30 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:all.PatientBookingSlot@24269709]" started-at="2026-07-09T18:25:32 IST" name="beforeSuite" finished-at="2026-07-09T18:25:32 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:all.PatientBookingSlot@3c9754d8]" started-at="2026-07-09T16:13:56 IST" name="beforeClass" finished-at="2026-07-09T16:13:58 IST" duration-ms="1796" status="PASS">
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:all.PatientBookingSlot@24269709]" started-at="2026-07-09T18:26:05 IST" name="beforeClass" finished-at="2026-07-09T18:26:06 IST" duration-ms="1391" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:all.PatientBookingSlot@3c9754d8]" started-at="2026-07-09T16:13:58 IST" name="beforeMethod" finished-at="2026-07-09T16:14:09 IST" duration-ms="10769" status="PASS">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:all.PatientBookingSlot@24269709]" started-at="2026-07-09T18:26:06 IST" name="beforeMethod" finished-at="2026-07-09T18:26:17 IST" duration-ms="10315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="PatientBookingSlotTest()[pri:2, instance:all.PatientBookingSlot@3c9754d8]" started-at="2026-07-09T16:14:09 IST" name="PatientBookingSlotTest" finished-at="2026-07-09T16:15:06 IST" duration-ms="57357" status="FAIL">
+        <test-method signature="PatientBookingSlotTest()[pri:2, instance:all.PatientBookingSlot@24269709]" started-at="2026-07-09T18:26:17 IST" name="PatientBookingSlotTest" finished-at="2026-07-09T18:26:34 IST" duration-ms="17181" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Full Name']"}
-  (Session info: chrome=150.0.7871.102)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//h6[contains(.,'Vicky')]/../../following-sibling::div//button[.='Book Now']"}
+  (Session info: chrome=148.0.7778.217)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7ae3883e8f0cca2aaa5f7d142cb64c3c, findElement {using=xpath, value=//input[@placeholder='Full Name']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.115 (25f5b661e5b..., userDataDir: C:\Users\VIKRAM\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61000}, goog:processID: 13752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61000/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7ae3883e8f0cca2aaa5f7d142cb64c3c]]>
+Command: [8ca4d1c6332c826ec50b56e6190d7317, findElement {using=xpath, value=//h6[contains(.,'Vicky')]/../../following-sibling::div//button[.='Book Now']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\INNOVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49157}, goog:processID: 10612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49157/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ca4d1c6332c826ec50b56e6190d7317]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@placeholder='Full Name']"}
-  (Session info: chrome=150.0.7871.102)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//h6[contains(.,'Vicky')]/../../following-sibling::div//button[.='Book Now']"}
+  (Session info: chrome=148.0.7778.217)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7ae3883e8f0cca2aaa5f7d142cb64c3c, findElement {using=xpath, value=//input[@placeholder='Full Name']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.115 (25f5b661e5b..., userDataDir: C:\Users\VIKRAM\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61000}, goog:processID: 13752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61000/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 7ae3883e8f0cca2aaa5f7d142cb64c3c
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+Command: [8ca4d1c6332c826ec50b56e6190d7317, findElement {using=xpath, value=//h6[contains(.,'Vicky')]/../../following-sibling::div//button[.='Book Now']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\INNOVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49157}, goog:processID: 10612, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49157/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8ca4d1c6332c826ec50b56e6190d7317
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -60,13 +58,11 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy16.sendKeys(Unknown Source)
-at patientObjectRepository.PatientDetailsPage.givingPatientDetails(PatientDetailsPage.java:81)
-at all.PatientBookingSlot.PatientBookingSlotTest(PatientBookingSlot.java:61)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at jdk.proxy2/jdk.proxy2.$Proxy19.getText(Unknown Source)
+at patientObjectRepository.FindDoctorsPage.selectingDoctor(FindDoctorsPage.java:84)
+at all.PatientBookingSlot.PatientBookingSlotTest(PatientBookingSlot.java:33)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
@@ -75,50 +71,142 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
 at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PatientBookingSlotTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:all.PatientBookingSlot@3c9754d8]" started-at="2026-07-09T16:15:06 IST" name="afterMethod" finished-at="2026-07-09T16:15:10 IST" duration-ms="3162" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:all.PatientBookingSlot@24269709]" started-at="2026-07-09T18:26:34 IST" name="afterMethod" finished-at="2026-07-09T18:26:38 IST" duration-ms="4147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:all.PatientBookingSlot@24269709]" started-at="2026-07-09T18:26:38 IST" name="afterClass" finished-at="2026-07-09T18:26:39 IST" duration-ms="469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:all.PatientBookingSlot@24269709]" started-at="2026-07-09T18:26:39 IST" name="afterSuite" finished-at="2026-07-09T18:26:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- all.PatientBookingSlot -->
+      <class name="all.DoctorAddingSlot">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:all.DoctorAddingSlot@367ffa75]" started-at="2026-07-09T18:25:32 IST" name="beforeSuite" finished-at="2026-07-09T18:25:32 IST" duration-ms="9" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:all.DoctorAddingSlot@367ffa75]" started-at="2026-07-09T18:25:32 IST" name="beforeClass" finished-at="2026-07-09T18:25:34 IST" duration-ms="1837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:all.DoctorAddingSlot@367ffa75]" started-at="2026-07-09T18:25:34 IST" name="beforeMethod" finished-at="2026-07-09T18:25:44 IST" duration-ms="10423" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="doctorAddingSlot()[pri:1, instance:all.DoctorAddingSlot@367ffa75]" started-at="2026-07-09T18:25:44 IST" name="doctorAddingSlot" finished-at="2026-07-09T18:26:04 IST" duration-ms="19388" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[element click intercepted: Element <img _ngcontent-ng-c3368939892="" class="profile-avatar" src="profile-icon.svg"> is not clickable at point (1324, 44). Other element would receive the click: <div _ngcontent-ng-c1202777468="" class="popup-backdrop">...</div>
-  (Session info: chrome=150.0.7871.102)
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='slot-item ng-star-inserted'])[1]"}
+  (Session info: chrome=148.0.7778.217)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7ae3883e8f0cca2aaa5f7d142cb64c3c, clickElement {id=f.0EDC1B73ACF35F20D2FEC7E39E3EFD63.d.E0F4F486E7C58FB809A4C945A61C2896.e.129}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.115 (25f5b661e5b..., userDataDir: C:\Users\VIKRAM\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61000}, goog:processID: 13752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61000/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7ae3883e8f0cca2aaa5f7d142cb64c3c)] -> xpath: //img[@class='profile-avatar']]
-Session ID: 7ae3883e8f0cca2aaa5f7d142cb64c3c]]>
+Command: [c0f49bce6851064e99af57ea87436ee5, findElement {using=xpath, value=(//div[@class='slot-item ng-star-inserted'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\INNOVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65481}, goog:processID: 15420, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65481/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0f49bce6851064e99af57ea87436ee5]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <img _ngcontent-ng-c3368939892="" class="profile-avatar" src="profile-icon.svg"> is not clickable at point (1324, 44). Other element would receive the click: <div _ngcontent-ng-c1202777468="" class="popup-backdrop">...</div>
-  (Session info: chrome=150.0.7871.102)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//div[@class='slot-item ng-star-inserted'])[1]"}
+  (Session info: chrome=148.0.7778.217)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7ae3883e8f0cca2aaa5f7d142cb64c3c, clickElement {id=f.0EDC1B73ACF35F20D2FEC7E39E3EFD63.d.E0F4F486E7C58FB809A4C945A61C2896.e.129}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.102, chrome: {chromedriverVersion: 150.0.7871.115 (25f5b661e5b..., userDataDir: C:\Users\VIKRAM\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61000}, goog:processID: 13752, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61000/devtoo..., se:cdpVersion: 150.0.7871.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7ae3883e8f0cca2aaa5f7d142cb64c3c)] -> xpath: //img[@class='profile-avatar']]
-Session ID: 7ae3883e8f0cca2aaa5f7d142cb64c3c
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+Command: [c0f49bce6851064e99af57ea87436ee5, findElement {using=xpath, value=(//div[@class='slot-item ng-star-inserted'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\INNOVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65481}, goog:processID: 15420, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65481/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c0f49bce6851064e99af57ea87436ee5
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+at doctorObjectRepository.WelcomePage.DoctorAddingSlot(WelcomePage.java:185)
+at all.DoctorAddingSlot.doctorAddingSlot(DoctorAddingSlot.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doctorAddingSlot -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:all.DoctorAddingSlot@367ffa75]" started-at="2026-07-09T18:26:04 IST" name="afterMethod" finished-at="2026-07-09T18:26:05 IST" duration-ms="1048" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <img _ngcontent-ng-c500337686="" class="profile-img" src="assets/User-Profile.png"> is not clickable at point (1579, 42). Other element would receive the click: <div _ngcontent-ng-c3795216558="" class="modal fade show custom-modal" style="display: block;">...</div>
+  (Session info: chrome=148.0.7778.217)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c0f49bce6851064e99af57ea87436ee5, clickElement {id=f.1409924CF14C2471A8F4A371FEDF1974.d.1C7DF957E41966D9BF7B563B82424E14.e.147}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\INNOVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65481}, goog:processID: 15420, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65481/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c0f49bce6851064e99af57ea87436ee5)] -> xpath: //img[@class='profile-img']]
+Session ID: c0f49bce6851064e99af57ea87436ee5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <img _ngcontent-ng-c500337686="" class="profile-img" src="assets/User-Profile.png"> is not clickable at point (1579, 42). Other element would receive the click: <div _ngcontent-ng-c3795216558="" class="modal fade show custom-modal" style="display: block;">...</div>
+  (Session info: chrome=148.0.7778.217)
+Build info: version: '4.34.0', revision: '707dcb4246*'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c0f49bce6851064e99af57ea87436ee5, clickElement {id=f.1409924CF14C2471A8F4A371FEDF1974.d.1C7DF957E41966D9BF7B563B82424E14.e.147}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\INNOVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65481}, goog:processID: 15420, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65481/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c0f49bce6851064e99af57ea87436ee5)] -> xpath: //img[@class='profile-img']]
+Session ID: c0f49bce6851064e99af57ea87436ee5
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -128,17 +216,13 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
-at patientObjectRepository.PatientProfilePage.logoutPatient(PatientProfilePage.java:102)
-at genericUtilities.PatientBaseClass.afterMethod(PatientBaseClass.java:94)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+at genericUtilities.DoctorBaseClass.afterMethod(DoctorBaseClass.java:103)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
@@ -152,57 +236,27 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
 at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:all.PatientBookingSlot@3c9754d8]" started-at="2026-07-09T16:15:10 IST" name="afterClass" finished-at="2026-07-09T16:15:10 IST" duration-ms="553" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:all.DoctorAddingSlot@367ffa75]" started-at="2026-07-09T18:26:05 IST" name="afterClass" finished-at="2026-07-09T18:26:05 IST" duration-ms="165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:all.PatientBookingSlot@3c9754d8]" started-at="2026-07-09T16:15:10 IST" name="afterSuite" finished-at="2026-07-09T16:15:10 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- all.PatientBookingSlot -->
-      <class name="all.DoctorAddingSlot">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:all.DoctorAddingSlot@62ddbd7e]" started-at="2026-07-09T16:13:30 IST" name="beforeSuite" finished-at="2026-07-09T16:13:30 IST" duration-ms="12" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:all.DoctorAddingSlot@62ddbd7e]" started-at="2026-07-09T16:13:30 IST" name="beforeClass" finished-at="2026-07-09T16:13:32 IST" duration-ms="2106" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:all.DoctorAddingSlot@62ddbd7e]" started-at="2026-07-09T16:13:33 IST" name="beforeMethod" finished-at="2026-07-09T16:13:43 IST" duration-ms="10834" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="doctorAddingSlot()[pri:1, instance:all.DoctorAddingSlot@62ddbd7e]" started-at="2026-07-09T16:13:43 IST" name="doctorAddingSlot" finished-at="2026-07-09T16:13:50 IST" duration-ms="7100" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doctorAddingSlot -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:all.DoctorAddingSlot@62ddbd7e]" started-at="2026-07-09T16:13:50 IST" name="afterMethod" finished-at="2026-07-09T16:13:56 IST" duration-ms="5488" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:all.DoctorAddingSlot@62ddbd7e]" started-at="2026-07-09T16:13:56 IST" name="afterClass" finished-at="2026-07-09T16:13:56 IST" duration-ms="480" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:all.DoctorAddingSlot@62ddbd7e]" started-at="2026-07-09T16:15:10 IST" name="afterSuite" finished-at="2026-07-09T16:15:10 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:all.DoctorAddingSlot@367ffa75]" started-at="2026-07-09T18:26:39 IST" name="afterSuite" finished-at="2026-07-09T18:26:39 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
