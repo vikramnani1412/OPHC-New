@@ -1,21 +1,17 @@
 package ophc;
 
-import java.io.IOException;
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
-
 import doctorObjectRepository.ApplicationFormPage;
 import doctorObjectRepository.DocumentUploadPage;
 import doctorObjectRepository.LoginPage;
 import doctorObjectRepository.RegisterPage;
 import doctorObjectRepository.VerifyCodePage;
-import genericUtilities.DoctorBaseClass;
 import genericUtilities.ExcelFileUtility;
 import genericUtilities.JavaUtility;
 import genericUtilities.PropertyFileUtility;

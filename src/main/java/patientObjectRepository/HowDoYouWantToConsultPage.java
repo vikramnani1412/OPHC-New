@@ -11,6 +11,10 @@ public class HowDoYouWantToConsultPage {
     
 	@FindBy(xpath="//img[@alt='close']")private WebElement CloseBtn;
 	
+	@FindBy(xpath="//h6[.='Razor Pay']")private WebElement RazorPayChkbox;
+	
+	@FindBy(xpath="//h6[.='OPHC Wallet']")private WebElement OPHCWalletChkbox;
+	
     @FindBy(xpath="//div[@class='radio active']")private WebElement VideoCallRadioBtn;
     
     @FindBy(xpath="//input[@id='termsCheckbox']")private WebElement TermsChkbox;
@@ -65,6 +69,8 @@ public class HowDoYouWantToConsultPage {
 	
 	public void CompleteHowDoYouWantToConsultDetailsAndClickOnContinueBtn() throws Exception
 	{
+		Thread.sleep(2000);
+		RazorPayChkbox.click();
 		Thread.sleep(2000);
 		TermsChkbox.click();
 		Thread.sleep(2000);
