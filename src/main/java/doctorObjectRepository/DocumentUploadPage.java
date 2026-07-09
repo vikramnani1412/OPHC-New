@@ -191,21 +191,21 @@ public class DocumentUploadPage {
 		WebDriverUtility wUtil = new WebDriverUtility();
 		ExcelFileUtility eUtil = new ExcelFileUtility();
 		
-		String medicalCertificate = eUtil.readDataFromExcel("Doctor", 5,  1);
-        String nmcCertificate = eUtil.readDataFromExcel("Doctor", 6,  1);
-        String aadhar = eUtil.readDataFromExcel("Doctor", 7,  1);
-        String pan = eUtil.readDataFromExcel("Doctor", 8,  1);
-        String experiance = eUtil.readDataFromExcel("Doctor", 9,  1);
-        String affiliationProof = eUtil.readDataFromExcel("Doctor", 10, 1);
+//		String medicalCertificate = eUtil.readDataFromExcel("Doctor", 5,  1);
+//        String nmcCertificate = eUtil.readDataFromExcel("Doctor", 6,  1);
+//        String aadhar = eUtil.readDataFromExcel("Doctor", 7,  1);
+//        String pan = eUtil.readDataFromExcel("Doctor", 8,  1);
+//        String experiance = eUtil.readDataFromExcel("Doctor", 9,  1);
+//        String affiliationProof = eUtil.readDataFromExcel("Doctor", 10, 1);
 		
-		wUtil.scrollPageUp(1);
-        Thread.sleep(2000);
-        
-        wUtil.takeScreenShot(driver, "S_Without Documents Uploading Submit Documents Btn is Disabled Error");
-        Thread.sleep(2000);
-        
-        Thread.sleep(2000);
-	    wUtil.scrollPageUp(2);
+//		wUtil.scrollPageUp(1);
+//        Thread.sleep(2000);
+//        
+//        wUtil.takeScreenShot(driver, "S_Without Documents Uploading Submit Documents Btn is Disabled Error");
+//        Thread.sleep(2000);
+//        
+//        Thread.sleep(2000);
+//	    wUtil.scrollPageUp(2);
 	    Thread.sleep(2000);
 //	    UploadMedicalDegreeCertificateIcon.click();
 //	    Thread.sleep(2000);
@@ -236,13 +236,45 @@ public class DocumentUploadPage {
 				driver.findElement(By.xpath("//span[.=' ✗ Upload failed ']/preceding-sibling::input[@type='file']")).sendKeys("C:\\Users\\Innovatiview\\Pictures\\A\\Aadhaar.png");
 			}
 		} catch (Exception e) {
-			Thread.sleep(10);
+			Thread.sleep(1000);
 		}
 	    
 	    wUtil.waitForElementToBeVisible(driver, SubmitDocumentsBtn);
 	    
-	    Thread.sleep(2000);
-        
+	    if (SubmitDocumentsBtn.isDisplayed())
+	    {
+	    	Thread.sleep(2000);
+		    TermsChckBox.click();
+		    Thread.sleep(2000);
+		    wUtil.takeScreenShot(driver, "Submit Button Disabled Without Accepting Terms and Conditions");
+		    Thread.sleep(2000);
+		    TermsChckBox.click();
+		    
+		    GuidelinesChckbox.click();
+		    Thread.sleep(2000);
+		    wUtil.takeScreenShot(driver, "Submit Button Disabled Without Accepting Guidelines");
+		    Thread.sleep(2000);
+		    GuidelinesChckbox.click();
+		    wUtil.scrollPageDown(1);
+		    Thread.sleep(2000);
+		    
+		    MedicalRegistrationChckbox.click();
+		    Thread.sleep(2000);
+		    wUtil.takeScreenShot(driver, "Submit Button Disabled Without Accepting Medical Registration Rules");
+		    Thread.sleep(2000);
+		    MedicalRegistrationChckbox.click();
+		    Thread.sleep(2000);
+		    
+		    IconsentChckbox.click();
+		    Thread.sleep(2000);
+		    wUtil.takeScreenShot(driver, "Submit Button Disabled Without Accepting Iconsent Details");
+		    Thread.sleep(2000);
+		    IconsentChckbox.click();
+		    Thread.sleep(2000);
+		}
+	    
+	    
+	    
         
         
     }

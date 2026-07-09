@@ -53,7 +53,7 @@ public class Sprint_2_Negative {
     String editConsultancyFee;
     String finalRating;
     String reasonForRejection;
-
+    
     int doctorNumber = 1;
     
 	@Test
@@ -73,13 +73,12 @@ public class Sprint_2_Negative {
         experience = eUtil.readDataFromExcel("Doctor", 9,  1);
         affiliationProof = eUtil.readDataFromExcel("Doctor", 10, 1);
     	
-    	
 		WebDriverManager.chromedriver().setup();
 		ChromeOptions options = new ChromeOptions();
-
+		
         // Disable browser notifications
         options.addArguments("--disable-notifications");
-
+        
         // Start browser maximized
         options.addArguments("--start-maximized");
         WebDriver driver = new ChromeDriver(options);
@@ -108,6 +107,12 @@ public class Sprint_2_Negative {
         
         ApplicationFormPage afPage = new ApplicationFormPage(driver);
         afPage.UploadDoctorDetailsNegative(driver, imagePath, Name);
+        
+        wUtil.scrollPageUp(1);
+        Thread.sleep(2000);
+        
+        wUtil.takeScreenShot(driver, "S_Without Documents Uploading Submit Documents Btn is Disabled Error");
+        Thread.sleep(2000);
         
         Thread.sleep(2000);
         driver.findElement(By.xpath("//span[.='Medical Degree  Certificate']/../preceding-sibling::input")).sendKeys(medicalCertificate);

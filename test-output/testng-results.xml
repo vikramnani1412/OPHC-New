@@ -2,16 +2,40 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-07T15:23:16 IST" name="Default suite" finished-at="2026-07-07T15:28:27 IST" duration-ms="310977">
+  <suite started-at="2026-07-09T15:01:41 IST" name="Default suite" finished-at="2026-07-09T15:01:51 IST" duration-ms="10256">
     <groups>
     </groups>
-    <test started-at="2026-07-07T15:23:16 IST" name="Default test" finished-at="2026-07-07T15:28:27 IST" duration-ms="310977">
-      <class name="ophc.Sprint_2_Negative">
-        <test-method signature="registerPageNegativeTest()[pri:0, instance:ophc.Sprint_2_Negative@22ff4249]" started-at="2026-07-07T15:23:16 IST" name="registerPageNegativeTest" finished-at="2026-07-07T15:28:27 IST" duration-ms="310938" status="PASS">
+    <test started-at="2026-07-09T15:01:41 IST" name="Default test" finished-at="2026-07-09T15:01:51 IST" duration-ms="10256">
+      <class name="all.AdminWithBaseClassSampleTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:all.AdminWithBaseClassSampleTest@7a8c8dcf]" started-at="2026-07-09T15:01:41 IST" name="beforeSuite" finished-at="2026-07-09T15:01:41 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- registerPageNegativeTest -->
-      </class> <!-- ophc.Sprint_2_Negative -->
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:all.AdminWithBaseClassSampleTest@7a8c8dcf]" started-at="2026-07-09T15:01:41 IST" name="beforeClass" finished-at="2026-07-09T15:01:43 IST" duration-ms="1745" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:all.AdminWithBaseClassSampleTest@7a8c8dcf]" started-at="2026-07-09T15:01:43 IST" name="beforeMethod" finished-at="2026-07-09T15:01:49 IST" duration-ms="6238" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="adminTest()[pri:0, instance:all.AdminWithBaseClassSampleTest@7a8c8dcf]" started-at="2026-07-09T15:01:49 IST" name="adminTest" finished-at="2026-07-09T15:01:49 IST" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:all.AdminWithBaseClassSampleTest@7a8c8dcf]" started-at="2026-07-09T15:01:49 IST" name="afterMethod" finished-at="2026-07-09T15:01:51 IST" duration-ms="2082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:all.AdminWithBaseClassSampleTest@7a8c8dcf]" started-at="2026-07-09T15:01:51 IST" name="afterClass" finished-at="2026-07-09T15:01:51 IST" duration-ms="143" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:all.AdminWithBaseClassSampleTest@7a8c8dcf]" started-at="2026-07-09T15:01:51 IST" name="afterSuite" finished-at="2026-07-09T15:01:51 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- all.AdminWithBaseClassSampleTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
