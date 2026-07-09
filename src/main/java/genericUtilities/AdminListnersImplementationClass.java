@@ -21,7 +21,7 @@ package genericUtilities;
 	 *
 	 * @author vikra
 	 */
-	public class ListnersImplementationClass implements ITestListener {
+	public class AdminListnersImplementationClass implements ITestListener {
 
 	    private static ExtentReports report;
 	    // ThreadLocal-safe map keyed by test result hashcode, supports parallel execution
@@ -32,7 +32,7 @@ package genericUtilities;
 	        System.out.println("--> Suite Execution Started: " + context.getName() + " <--");
 
 	        if (report == null) {
-	            synchronized (ListnersImplementationClass.class) {
+	            synchronized (AdminListnersImplementationClass.class) {
 	                if (report == null) {
 	                    String reportPath = ".\\Extent Reports\\Report-"
 	                            + new JavaUtility().getSystemDateInFormat() + ".html";
@@ -46,7 +46,7 @@ package genericUtilities;
 	                    report = new ExtentReports();
 	                    report.attachReporter(htmlReport);
 	                    report.setSystemInfo("Base Browser", System.getProperty("browser", "Chrome"));
-	                    report.setSystemInfo("Base URL's", "https://stg-admin-ui.ophc.in/, https://stg-doctor.ophc.in/auth/login, https://stg-patient.ophc.in/landing/Homepage");
+	                    report.setSystemInfo("Base URL's", "https://stg-admin-ui.ophc.in/");
 	                    report.setSystemInfo("Base Platform", System.getProperty("os.name"));
 	                    report.setSystemInfo("Reporter Name", "Vikram Gangavarapu");
 	                    report.setSystemInfo("Environment", System.getProperty("env", "STAGING"));
@@ -90,7 +90,7 @@ package genericUtilities;
 
 	        try {
 	            String screenshotName = methodName + "_" + new JavaUtility().getSystemDateInFormat();
-	            String path = new WebDriverUtility().takeScreenShot(BaseClass.sDriver, screenshotName);
+	            String path = new WebDriverUtility().takeScreenShot(AdminBaseClass.sDriver, screenshotName);
 	            test.fail("Screenshot on failure",
 	                    MediaEntityBuilder.createScreenCaptureFromPath(path).build());
 	        } catch (IOException e) {

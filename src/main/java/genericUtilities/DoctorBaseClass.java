@@ -82,7 +82,7 @@ public class DoctorBaseClass {
     @BeforeMethod(alwaysRun = true)
     public void beforeMethod() throws Exception {
 
-    	String MOBILE_NUMBER = pUtility.readDataFromPropertyFile("mobilenumber");
+    	String MOBILE_NUMBER = pUtility.readDataFromPropertyFile("dmobilenumber");
     	
         LoginPage lPage = new LoginPage(driver);
         lPage.loginToDoctor(MOBILE_NUMBER);

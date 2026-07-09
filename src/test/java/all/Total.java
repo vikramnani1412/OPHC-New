@@ -8,13 +8,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import adminObjectRepository.AdminDashboardPage;
 import adminObjectRepository.AdminLoginPage;
 import adminObjectRepository.DrIdentityProofPage;
 import adminObjectRepository.DrKycManagementPage;
 import adminObjectRepository.PatientHomePage;
-
 import doctorObjectRepository.ApplicationFormPage;
 import doctorObjectRepository.DocumentUploadPage;
 import doctorObjectRepository.DocumentsUploadAfterKycRejecting;
@@ -23,15 +21,12 @@ import doctorObjectRepository.ProfileUnderVerificationPage;
 import doctorObjectRepository.RegisterPage;
 import doctorObjectRepository.VerifyCodePage;
 import doctorObjectRepository.WelcomePage;
-
 import genericUtilities.DataStore;
 import genericUtilities.ExcelFileUtility;
 import genericUtilities.JavaUtility;
 import genericUtilities.PropertyFileUtility;
 import genericUtilities.WebDriverUtility;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 import patientObjectRepository.AppointmentConfirmedPage;
 import patientObjectRepository.AppointmentsPage;
 import patientObjectRepository.FeeDetailsPage;
@@ -39,7 +34,7 @@ import patientObjectRepository.FindDoctorsPage;
 import patientObjectRepository.HowDoYouWantToConsultPage;
 import patientObjectRepository.PatientDetailsPage;
 import patientObjectRepository.PatientLoginPage;
-import patientObjectRepository.PatientPage;
+import patientObjectRepository.PatientProfilePage;
 import patientObjectRepository.PatientRegisterPage;
 import patientObjectRepository.PatientVerifyCodePage;
 import patientObjectRepository.RazorpayNetBankingPage;
@@ -390,7 +385,7 @@ public class Total {
         }
 
         // ── Find doctor & select slot ─────────────────────────────────────
-        PatientPage pPage = new PatientPage(driver);
+        PatientProfilePage pPage = new PatientProfilePage(driver);
         pPage.getPageCloseBtn().click();
         Thread.sleep(2000);
 

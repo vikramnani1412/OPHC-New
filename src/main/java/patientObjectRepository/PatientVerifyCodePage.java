@@ -14,7 +14,7 @@ public class PatientVerifyCodePage {
     
     @FindBy(xpath="//a[.='Resend']")private WebElement ResendLnk;
     
-    @FindBy(xpath="//button[.='Verify']")private WebElement VerifyBtn;
+    @FindBy(xpath="//span[.='Verify']")private WebElement VerifyBtn;
   
 	//Rule-3:Create a constructor to initilise these elements    
     

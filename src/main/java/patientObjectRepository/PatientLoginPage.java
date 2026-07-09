@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import doctorObjectRepository.VerifyCodePage;
+
 public class PatientLoginPage {
 
 	//Finding WebElements Using @FindBy Annotations
@@ -123,6 +125,18 @@ public class PatientLoginPage {
 	{
 		Thread.sleep(2000);
 		RegisterLnk.click();
+	}
+	
+	public void patientLogin(WebDriver driver, String PhoneNumber) throws Exception
+	{
+		Thread.sleep(2000);
+	    EmailOrPhoneEdt.sendKeys(PhoneNumber);
+	    Thread.sleep(2000);
+	    LoginBtn.click();
+	    Thread.sleep(2000);
+	    PatientVerifyCodePage pvcPage = new PatientVerifyCodePage(driver);
+	    pvcPage.enterOtpAndClickVerifyBtn("123456");
+	    Thread.sleep(2000);
 	}
 	
 	

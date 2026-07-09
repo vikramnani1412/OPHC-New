@@ -27,7 +27,7 @@ import genericUtilities.PropertyFileUtility;
 import genericUtilities.WebDriverUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import patientObjectRepository.PatientLoginPage;
-import patientObjectRepository.PatientPage;
+import patientObjectRepository.PatientProfilePage;
 import patientObjectRepository.PatientRegisterPage;
 import patientObjectRepository.PatientVerifyCodePage;
 
@@ -353,7 +353,7 @@ public class Sample {
                     "Name mismatch! Expected: " + patientFullName + " but got: " + visibleName);
         }
 
-        PatientPage pPage = new PatientPage(driver);
+        PatientProfilePage pPage = new PatientProfilePage(driver);
         pPage.getPageCloseBtn().click();
 
         driver.quit();
