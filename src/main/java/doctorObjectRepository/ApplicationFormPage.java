@@ -26,7 +26,7 @@ public class ApplicationFormPage {
     
     @FindBy(xpath="//input[@formcontrolname='fullName']")private WebElement FullNameEdt;
     
-    @FindBy(xpath="//input[@formcontrolname='stateMedicalCouncilNumber']")private WebElement StateMedicalCouncilRegistrationNoEdt;
+    @FindBy(xpath="//input[@formcontrolname='smcRegistrationNumber']")private WebElement StateMedicalCouncilRegistrationNoEdt;
     
     @FindBy(xpath="//input[@formcontrolname='nmcNumber']")private WebElement NmcNumberEdt;
     

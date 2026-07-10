@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" parallel="tests" name="Failed suite [PatientBookingSlot]" guice-stage="DEVELOPMENT">
-  <test thread-count="1" parallel="tests" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="all.PatientBookingSlot">
+      <class name="ophc.Sprint_2_Negative">
         <methods>
-          <include name="afterMethod"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="PatientBookingSlotTest"/>
-          <include name="afterClass"/>
-          <include name="afterSuite"/>
-          <include name="beforeSuite"/>
+          <include name="registerPageNegativeTest"/>
         </methods>
-      </class> <!-- all.PatientBookingSlot -->
-      <class name="all.DoctorAddingSlot">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-          <include name="doctorAddingSlot"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- all.DoctorAddingSlot -->
+      </class> <!-- ophc.Sprint_2_Negative -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [PatientBookingSlot] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
