@@ -146,10 +146,11 @@ public class RazorpayNetBankingPage {
 			if(!ChildWin.equals(ParentWin))
 			{
 			    driver.switchTo().window(ChildWin);
-			    driver.findElement(By.xpath("//button[.='Success']")).click();
+			    WebElement Success = driver.findElement(By.xpath("//button[.='Success']"));
+			    wUtil.waitAndClick(driver, Success);
 			}
 		}
-		
+		Thread.sleep(2000);
 		driver.switchTo().window(ParentWin);
         
 		

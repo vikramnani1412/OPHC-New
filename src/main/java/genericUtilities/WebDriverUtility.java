@@ -4,6 +4,7 @@ import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -13,6 +14,9 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -468,6 +472,43 @@ public class WebDriverUtility {
 		robot.keyRelease(KeyEvent.VK_ESCAPE);
 	}
 
+	/**
+	 * This method will scroll the page so the given element is in view,
+	 * centering it in the viewport
+	 * @param driver
+	 * @param element
+	 */
+	public void scrollExactToParticularWebElement(WebDriver driver, WebElement element) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollIntoView({block: 'center'});", element);
+	}
+	
+	/**
+	 * Generates a new sample .docx file with unique content each time it's called.
+	 * @param folderPath  folder where the file should be created e.g. "C:\\TestData\\"
+	 * @param fileNamePrefix  prefix for the file name e.g. "MedicalCertificate"
+	 * @return full path of the newly created document
+	 */
+	public String generateSampleDocument(String folderPath, String fileNamePrefix) throws IOException {
+	    String timestamp = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
+	    String fileName = fileNamePrefix + "_" + timestamp + ".docx";
+	    String filePath = folderPath + fileName;
+
+	    XWPFDocument document = new XWPFDocument();
+	    XWPFParagraph paragraph = document.createParagraph();
+	    XWPFRun run = paragraph.createRun();
+	    run.setText("Sample Medical Certificate generated for automation test");
+	    run.addBreak();
+	    run.setText("Generated on: " + timestamp);
+
+	    try (FileOutputStream out = new FileOutputStream(filePath)) {
+	        document.write(out);
+	    }
+	    document.close();
+
+	    return filePath;
+	}
+	
 	/**
 	 * This method will scroll the page so the given element is in view
 	 * @param driver

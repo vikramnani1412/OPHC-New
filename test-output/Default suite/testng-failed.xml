@@ -5,11 +5,9 @@
     <classes>
       <class name="all.PatientBookingSlot">
         <methods>
-          <include name="afterMethod"/>
           <include name="beforeClass"/>
           <include name="beforeMethod"/>
           <include name="PatientBookingSlotTest"/>
-          <include name="afterClass"/>
           <include name="afterSuite"/>
           <include name="beforeSuite"/>
         </methods>

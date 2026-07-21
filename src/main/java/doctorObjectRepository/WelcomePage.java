@@ -174,10 +174,10 @@ public class WelcomePage {
         Thread.sleep(2000);
         WebElement Todayy = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[.=' "+Today+" ']")));
         Thread.sleep(2000);
-        wUtil.scrollToParticularWebElement(driver, AddSlotBtn);
+        wUtil.scrollExactToParticularWebElement(driver, AddSlotBtn);
         Thread.sleep(2000);
         Todayy.click();
-        Thread.sleep(2000);
+//        Thread.sleep(2000);
 //        wUtil.scrollToParticularWebElement(driver, AddSlotBtn);
         Thread.sleep(2000);
         AddSlotBtn.click();

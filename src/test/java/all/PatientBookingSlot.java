@@ -1,15 +1,19 @@
 package all;
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import genericUtilities.ExcelFileUtility;
 import genericUtilities.JavaUtility;
 import genericUtilities.PatientBaseClass;
 import genericUtilities.WebDriverUtility;
 import patientObjectRepository.AppointmentConfirmedPage;
 import patientObjectRepository.AppointmentsPage;
+import patientObjectRepository.DoctorDetailsPage;
 import patientObjectRepository.FeeDetailsPage;
 import patientObjectRepository.FindDoctorsPage;
 import patientObjectRepository.HowDoYouWantToConsultPage;
@@ -33,11 +37,15 @@ public class PatientBookingSlot extends PatientBaseClass {
         fdocPage.selectingDoctor();
         Thread.sleep(2000);
 
-        FeeDetailsPage fdPage = new FeeDetailsPage(driver);
-        fdPage.clickOnFrstAvailableSlot(driver);
-        Thread.sleep(2000);
-        fdPage.clickOnBookNowBtn();
-        Thread.sleep(1000);
+        DoctorDetailsPage ddPage = new DoctorDetailsPage(driver);
+        ddPage.BookingAppointment();
+        
+        
+//        FeeDetailsPage fdPage = new FeeDetailsPage(driver);
+//        fdPage.clickOnFrstAvailableSlot(driver);
+//        Thread.sleep(2000);
+//        fdPage.clickOnBookNowBtn();
+//        Thread.sleep(1000);
 
         // ── Consultation type ─────────────────────────────────────────────
         HowDoYouWantToConsultPage hPage = new HowDoYouWantToConsultPage(driver);
@@ -58,13 +66,12 @@ public class PatientBookingSlot extends PatientBaseClass {
         rnPage.bookSlotUsingSBIbank(driver);
         Thread.sleep(1000);
 
-        // ── Patient details & reports ─────────────────────────────────────
-        PatientDetailsPage pdPage = new PatientDetailsPage(driver);
-        pdPage.givingPatientDetails(patientFullName);
+//        // ── Patient details & reports ─────────────────────────────────────
+//        PatientDetailsPage pdPage = new PatientDetailsPage(driver);
+//        pdPage.givingPatientDetails(patientFullName);
 
-        UploadMedicalReportsAfterAppointmentConfirmPage umraaPage =
-                new UploadMedicalReportsAfterAppointmentConfirmPage(driver);
-        umraaPage.uploadingMedicalReports();
+        UploadMedicalReportsAfterAppointmentConfirmPage umraaPage = new UploadMedicalReportsAfterAppointmentConfirmPage(driver);
+        umraaPage.uploadingMedicalReports(driver);
 
         // ── Confirm booking ───────────────────────────────────────────────
         AppointmentConfirmedPage acPage = new AppointmentConfirmedPage(driver);
@@ -78,5 +85,13 @@ public class PatientBookingSlot extends PatientBaseClass {
         aPage.checkingAppointmentBookedOrNot(BookingID);
         Thread.sleep(2000);
     }
+	
+	
+	@Test
+	public void report() throws Exception
+	{
+		ExcelFileUtility eUtil = new ExcelFileUtility();
+		eUtil.generateSampleMedicalReport(".\\src\\test\\resources\\OPHC Automation Excel.xlsx", "Medical Report", "Doctor", 4, 2);
+	}
 	
 }

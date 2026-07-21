@@ -424,7 +424,7 @@ public class Total {
 
         UploadMedicalReportsAfterAppointmentConfirmPage umraaPage =
                 new UploadMedicalReportsAfterAppointmentConfirmPage(driver);
-        umraaPage.uploadingMedicalReports();
+        umraaPage.uploadingMedicalReports(driver);
 
         // ── Confirm booking ───────────────────────────────────────────────
         AppointmentConfirmedPage acPage = new AppointmentConfirmedPage(driver);

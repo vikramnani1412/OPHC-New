@@ -1,11 +1,13 @@
 package patientObjectRepository;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import genericUtilities.ExcelFileUtility;
+import genericUtilities.WebDriverUtility;
 
 public class UploadMedicalReportsAfterAppointmentConfirmPage {
 
@@ -44,14 +46,18 @@ public class UploadMedicalReportsAfterAppointmentConfirmPage {
 	
 	// Business Library
 	
-	public void uploadingMedicalReports() throws Exception 
+	public void uploadingMedicalReports(WebDriver driver) throws Exception 
 	{
+//		WebDriverUtility wUtil = new WebDriverUtility();
 		ExcelFileUtility eUtil = new ExcelFileUtility();
-		String medicalCertificate = eUtil.readDataFromExcel("Doctor", 5,  1);
+		String medicalReportImage = eUtil.generateSampleMedicalReport("C:\\TestData\\", "MedicalReport", "Doctor", 6, 4);
 		
 		Thread.sleep(2000);
-		UploadZone.sendKeys(medicalCertificate);
+		UploadZone.sendKeys(medicalReportImage);
 		Thread.sleep(2000);
 		SubmitBtn.click();
+		Thread.sleep(2000);
+		
+		
 	}
 }
