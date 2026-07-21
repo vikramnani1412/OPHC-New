@@ -60,9 +60,9 @@
 <!--This is the external compiler used to compile the project-->
 <dependency> 
 	<groupId>org.projectlombok</groupId> 
-    <artifactId>lombok</artifactId> 
-    <version>1.18.24</version> 
-    <scope>provided</scope> 
+    <artifactId>lombok</artifactId>
+    <version>1.18.24</version>
+    <scope>provided</scope>
 </dependency>
 
 <!-- Source: https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
