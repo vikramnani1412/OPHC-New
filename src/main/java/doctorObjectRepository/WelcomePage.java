@@ -16,13 +16,13 @@ import genericUtilities.WebDriverUtility;
 public class WelcomePage {
 
 	WebDriverUtility wUtil = new WebDriverUtility();
-	JavaUtility jUtil = new JavaUtility();
-	String Time = jUtil.getCurrentTimeInOPHCformat();
-	
-	
-	String NextSlot = jUtil.getNextHalfHourSlotForOPHC();
-	
-	//Finding WebElements Using @FindBy Annotations
+    JavaUtility jUtil = new JavaUtility();
+    String Time = jUtil.getCurrentTimeInOPHCformat();
+    
+    
+    String NextSlot = jUtil.getNextHalfHourSlotForOPHC();
+    
+    //Finding WebElements Using @FindBy Annotations
 
     @FindBy(xpath="//img[@class='profile-img']")private WebElement ProfileImg;
     
@@ -66,127 +66,127 @@ public class WelcomePage {
     
     
     
-	//Rule-2:Create a constructor to initilise these elements
+    //Rule-2:Create a constructor to initilise these elements
     
-	public WelcomePage(WebDriver driver)
-	{
-		PageFactory.initElements(driver, this);
-	}
-	
-	//Rule-3:Provide getters to access these variables
+    public WelcomePage(WebDriver driver)
+    {
+        PageFactory.initElements(driver, this);
+    }
+    
+    //Rule-3:Provide getters to access these variables
     
 
-	public WebElement getProfileImg() {
-		return ProfileImg;
-	}
+    public WebElement getProfileImg() {
+        return ProfileImg;
+    }
 
-	public WebElement getConsultationsViewAllLnk() {
-		return ConsultationsViewAllLnk;
-	}
+    public WebElement getConsultationsViewAllLnk() {
+        return ConsultationsViewAllLnk;
+    }
 
-	public WebElement getAddSlotBtn() {
-		return AddSlotBtn;
-	}
+    public WebElement getAddSlotBtn() {
+        return AddSlotBtn;
+    }
 
-	
-	
-	public WebElement getAddSlotBtn2() {
-		return AddSlotBtn2;
-	}
+    
+    
+    public WebElement getAddSlotBtn2() {
+        return AddSlotBtn2;
+    }
 
-	public WebElement getNextMonthBtn() {
-		return NextMonthBtn;
-	}
-
-
-	public WebElement getSetAvailabitityBtn() {
-		return SetAvailabitityBtn;
-	}
+    public WebElement getNextMonthBtn() {
+        return NextMonthBtn;
+    }
 
 
-	public WebElement getLastDisabledDayInTheMonthEle() {
-		return LastDisabledDayInTheMonthEle;
-	}
+    public WebElement getSetAvailabitityBtn() {
+        return SetAvailabitityBtn;
+    }
 
 
-	public WebElement getTodaysDateInTheMonthEle() {
-		return TodaysDateInTheMonthEle;
-	}
+    public WebElement getLastDisabledDayInTheMonthEle() {
+        return LastDisabledDayInTheMonthEle;
+    }
 
 
-	public WebElement getTomorrowDateEle() {
-		return TomorrowDateEle;
-	}
+    public WebElement getTodaysDateInTheMonthEle() {
+        return TodaysDateInTheMonthEle;
+    }
 
 
-	public WebElement getSlotDeleteIcon() {
-		return SlotDeleteIcon;
-	}
+    public WebElement getTomorrowDateEle() {
+        return TomorrowDateEle;
+    }
 
 
-	public WebElement getRemoveSlotCancelBtn() {
-		return RemoveSlotCancelBtn;
-	}
+    public WebElement getSlotDeleteIcon() {
+        return SlotDeleteIcon;
+    }
 
 
-	public WebElement getRemoveSlotYesBtn() {
-		return RemoveSlotYesBtn;
-	}
+    public WebElement getRemoveSlotCancelBtn() {
+        return RemoveSlotCancelBtn;
+    }
 
 
-	public WebElement getTotalUpcomingSlots() {
-		return TotalUpcomingSlots;
-	}
+    public WebElement getRemoveSlotYesBtn() {
+        return RemoveSlotYesBtn;
+    }
 
 
-	public WebElement getTotalBookedSlots() {
-		return TotalBookedSlots;
-	}
+    public WebElement getTotalUpcomingSlots() {
+        return TotalUpcomingSlots;
+    }
 
 
-	public WebElement getTotalAvailableSlots() {
-		return TotalAvailableSlots;
-	}
+    public WebElement getTotalBookedSlots() {
+        return TotalBookedSlots;
+    }
 
 
-	public WebElement getAccodingCrntTimeJoinCallBtn() {
-		return AccodingCrntTimeJoinCallBtn;
-	}
-	
-	public WebElement getFirstAvailableSlotInSelectTimeSlotPage() {
-		return FirstAvailableSlotInSelectTimeSlotPage;
-	}
-	
-	// Business Library
+    public WebElement getTotalAvailableSlots() {
+        return TotalAvailableSlots;
+    }
 
-	public void DoctorAddingSlot(WebDriver driver) throws Exception
-	{
-//		String Time = jUtil.getCurrentTimeInOPHCformat();
-//		String NextSlot = jUtil.getNextHalfHourSlotForOPHC();
-		
-		int Today = jUtil.getTodaysDayOfTheMonth();
-		
-		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(
-		    By.xpath("//div[@class='card calendar-card p-3']") 
-		));
 
-		// Then click day 20
-		WebElement day20 = wait.until(ExpectedConditions.elementToBeClickable(
-		    By.xpath("//div[.=' "+Today+" ']")
-		));
-		day20.click();
-		
-//		driver.findElement(By.xpath("//div[.=' "+Today+" ']")).click();
-		Thread.sleep(2000);
-		AddSlotBtn.click();
-		Thread.sleep(2000);
-		FirstAvailableSlotInSelectTimeSlotPage.click();
-		Thread.sleep(2000);
-		AddSlotBtn2.click();
-		
-		
-	}
+    public WebElement getAccodingCrntTimeJoinCallBtn() {
+        return AccodingCrntTimeJoinCallBtn;
+    }
+    
+    public WebElement getFirstAvailableSlotInSelectTimeSlotPage() {
+        return FirstAvailableSlotInSelectTimeSlotPage;
+    }
+    
+    // Business Library
+
+    public void DoctorAddingSlot(WebDriver driver) throws Exception
+    {
+//        String Time = jUtil.getCurrentTimeInOPHCformat();
+//        String NextSlot = jUtil.getNextHalfHourSlotForOPHC();
+        
+        int Today = jUtil.getTodaysDayOfTheMonth();
+        
+        
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='card calendar-card p-3']")));
+
+        // Then click day 20
+        Thread.sleep(2000);
+        WebElement Todayy = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[.=' "+Today+" ']")));
+        Thread.sleep(2000);
+        wUtil.scrollToParticularWebElement(driver, AddSlotBtn);
+        Thread.sleep(2000);
+        Todayy.click();
+        Thread.sleep(2000);
+//        wUtil.scrollToParticularWebElement(driver, AddSlotBtn);
+        Thread.sleep(2000);
+        AddSlotBtn.click();
+        Thread.sleep(2000);
+        FirstAvailableSlotInSelectTimeSlotPage.click();
+        Thread.sleep(2000);
+        AddSlotBtn2.click();
+        
+        
+    }
 	
 }

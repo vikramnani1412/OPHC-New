@@ -27,9 +27,9 @@ public class PatientBookingSlot extends PatientBaseClass {
 	@Test(priority = 2)
 	void PatientBookingSlotTest() throws Exception
 	{
-		String patientFullName = jUtil.getRandomSingleName();
-		
-		FindDoctorsPage fdocPage = new FindDoctorsPage(driver);
+        String patientFullName = jUtil.getRandomSingleName();
+        
+        FindDoctorsPage fdocPage = new FindDoctorsPage(driver);
         fdocPage.selectingDoctor();
         Thread.sleep(2000);
 
@@ -77,9 +77,6 @@ public class PatientBookingSlot extends PatientBaseClass {
         AppointmentsPage aPage = new AppointmentsPage(driver);
         aPage.checkingAppointmentBookedOrNot(BookingID);
         Thread.sleep(2000);
-        
-        acPage.clickOnContinueBtn();
-        Thread.sleep(2000);
-	}
+    }
 	
 }
