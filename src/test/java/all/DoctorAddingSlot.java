@@ -2,11 +2,10 @@ package all;
 
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import doctorObjectRepository.WelcomePage;
 import genericUtilities.DoctorBaseClass;
 
-@Listeners(genericUtilities.DoctorListnersImplementationClass.class)
+@Listeners(genericUtilities.ListenersImplementationClass.class)
 public class DoctorAddingSlot extends DoctorBaseClass {
 
 	@Test(priority = 1)

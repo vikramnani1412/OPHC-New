@@ -58,7 +58,7 @@ public class DoctorDetailsPage {
 	
 	// Business Library
 	
-	public void BookingAppointment() throws Exception   //selectingSlotAnd
+	public void BookingAppointment(WebDriver driver) throws Exception   //selectingSlotAnd
 	{
 		WebDriverUtility wUtil = new WebDriverUtility();
 		
@@ -67,6 +67,8 @@ public class DoctorDetailsPage {
 		Thread.sleep(2000);
 		wUtil.scrollPageDown(2);
 		FrstAvailableSlot.click();
+		Thread.sleep(2000);
+		wUtil.scrollToParticularWebElement(driver, AfterSlotSelectionBookAppointmentBtn);
 		Thread.sleep(2000);
 		AfterSlotSelectionBookAppointmentBtn.click();
 		Thread.sleep(2000);

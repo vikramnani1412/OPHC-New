@@ -1,12 +1,9 @@
 package all;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import genericUtilities.ExcelFileUtility;
 import genericUtilities.JavaUtility;
 import genericUtilities.PatientBaseClass;
@@ -14,15 +11,13 @@ import genericUtilities.WebDriverUtility;
 import patientObjectRepository.AppointmentConfirmedPage;
 import patientObjectRepository.AppointmentsPage;
 import patientObjectRepository.DoctorDetailsPage;
-import patientObjectRepository.FeeDetailsPage;
 import patientObjectRepository.FindDoctorsPage;
 import patientObjectRepository.HowDoYouWantToConsultPage;
-import patientObjectRepository.PatientDetailsPage;
 import patientObjectRepository.RazorpayNetBankingPage;
 import patientObjectRepository.RazorpayOPHC;
 import patientObjectRepository.UploadMedicalReportsAfterAppointmentConfirmPage;
 
-//@Listeners(genericUtilities.PatientListnersImplementationClass.class)
+@Listeners(genericUtilities.ListenersImplementationClass.class)
 public class PatientBookingSlot extends PatientBaseClass {
 
 	WebDriverUtility wUtil = new WebDriverUtility();
@@ -31,14 +26,15 @@ public class PatientBookingSlot extends PatientBaseClass {
 	@Test(priority = 2)
 	void PatientBookingSlotTest() throws Exception
 	{
-        String patientFullName = jUtil.getRandomSingleName();
+//        String patientFullName = jUtil.getRandomSingleName();
         
+		
         FindDoctorsPage fdocPage = new FindDoctorsPage(driver);
         fdocPage.selectingDoctor();
         Thread.sleep(2000);
 
         DoctorDetailsPage ddPage = new DoctorDetailsPage(driver);
-        ddPage.BookingAppointment();
+        ddPage.BookingAppointment(driver);
         
         
 //        FeeDetailsPage fdPage = new FeeDetailsPage(driver);
@@ -69,7 +65,16 @@ public class PatientBookingSlot extends PatientBaseClass {
 //        // ── Patient details & reports ─────────────────────────────────────
 //        PatientDetailsPage pdPage = new PatientDetailsPage(driver);
 //        pdPage.givingPatientDetails(patientFullName);
+        Thread.sleep(2000);
+        ExcelFileUtility eUtil = new ExcelFileUtility();
+        String path = eUtil.generateSampleMedicalReport(
+                ".\\src\\test\\resources\\Reports",
+                "Medical Report",
+                "Sheet1",
+                1,
+                5);
 
+		Thread.sleep(2000);
         UploadMedicalReportsAfterAppointmentConfirmPage umraaPage = new UploadMedicalReportsAfterAppointmentConfirmPage(driver);
         umraaPage.uploadingMedicalReports(driver);
 
@@ -85,13 +90,5 @@ public class PatientBookingSlot extends PatientBaseClass {
         aPage.checkingAppointmentBookedOrNot(BookingID);
         Thread.sleep(2000);
     }
-	
-	
-	@Test
-	public void report() throws Exception
-	{
-		ExcelFileUtility eUtil = new ExcelFileUtility();
-		eUtil.generateSampleMedicalReport(".\\src\\test\\resources\\OPHC Automation Excel.xlsx", "Medical Report", "Doctor", 4, 2);
-	}
 	
 }

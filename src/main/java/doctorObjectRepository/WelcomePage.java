@@ -159,6 +159,16 @@ public class WelcomePage {
     
     // Business Library
 
+    public void logoutOfApp(WebDriver driver) throws Exception
+    {
+    	ProfileImg.click();
+    	DoctorProfilePage dpPage = new DoctorProfilePage(driver);
+    	dpPage.clickOnLogoutLnk();
+    	LogoutPage lPage = new LogoutPage(driver);
+    	lPage.clickOnYesLogoutBtn();
+    }
+    
+    
     public void DoctorAddingSlot(WebDriver driver) throws Exception
     {
 //        String Time = jUtil.getCurrentTimeInOPHCformat();

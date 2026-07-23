@@ -5,11 +5,11 @@
     <classes>
       <class name="all.PatientBookingSlot">
         <methods>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
+          <include name="logoutFromPatientApp"/>
+          <include name="closeBrowser"/>
           <include name="PatientBookingSlotTest"/>
-          <include name="afterSuite"/>
-          <include name="beforeSuite"/>
+          <include name="loginToPatientApp"/>
+          <include name="launchBrowser"/>
         </methods>
       </class> <!-- all.PatientBookingSlot -->
     </classes>
