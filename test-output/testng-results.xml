@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-23T15:11:38 IST" name="Suite" finished-at="2026-07-23T15:13:35 IST" duration-ms="117226">
+  <suite started-at="2026-07-23T15:22:30 IST" name="Suite" finished-at="2026-07-23T15:24:20 IST" duration-ms="109728">
     <groups>
     </groups>
-    <test started-at="2026-07-23T15:11:38 IST" name="Test" finished-at="2026-07-23T15:13:35 IST" duration-ms="117226">
+    <test started-at="2026-07-23T15:22:30 IST" name="Test" finished-at="2026-07-23T15:24:20 IST" duration-ms="109728">
       <class name="all.PatientBookingSlot">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:all.PatientBookingSlot@22fcf7ab]" started-at="2026-07-23T15:12:09 IST" name="launchBrowser" finished-at="2026-07-23T15:12:11 IST" duration-ms="1837" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:all.PatientBookingSlot@71e9ddb4]" started-at="2026-07-23T15:23:00 IST" name="launchBrowser" finished-at="2026-07-23T15:23:02 IST" duration-ms="1910" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="loginToPatientApp()[pri:0, instance:all.PatientBookingSlot@22fcf7ab]" started-at="2026-07-23T15:12:11 IST" name="loginToPatientApp" finished-at="2026-07-23T15:12:22 IST" duration-ms="10760" status="PASS">
+        <test-method is-config="true" signature="loginToPatientApp()[pri:0, instance:all.PatientBookingSlot@71e9ddb4]" started-at="2026-07-23T15:23:02 IST" name="loginToPatientApp" finished-at="2026-07-23T15:23:13 IST" duration-ms="10319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToPatientApp -->
-        <test-method signature="PatientBookingSlotTest()[pri:2, instance:all.PatientBookingSlot@22fcf7ab]" started-at="2026-07-23T15:12:22 IST" name="PatientBookingSlotTest" finished-at="2026-07-23T15:13:31 IST" duration-ms="69155" status="FAIL">
+        <test-method signature="PatientBookingSlotTest()[pri:2, instance:all.PatientBookingSlot@71e9ddb4]" started-at="2026-07-23T15:23:13 IST" name="PatientBookingSlotTest" finished-at="2026-07-23T15:24:16 IST" duration-ms="63827" status="FAIL">
           <exception class="java.lang.IllegalArgumentException">
             <message>
               <![CDATA[Sheet not found : Sheet1]]>
@@ -26,10 +26,8 @@ at genericUtilities.ExcelFileUtility.getSheetOrThrow(ExcelFileUtility.java:57)
 at genericUtilities.ExcelFileUtility.writeDataIntoExcel(ExcelFileUtility.java:115)
 at genericUtilities.ExcelFileUtility.generateSampleMedicalReport(ExcelFileUtility.java:283)
 at all.PatientBookingSlot.PatientBookingSlotTest(PatientBookingSlot.java:70)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
@@ -38,50 +36,48 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
 at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PatientBookingSlotTest -->
-        <test-method is-config="true" signature="logoutFromPatientApp()[pri:0, instance:all.PatientBookingSlot@22fcf7ab]" started-at="2026-07-23T15:13:31 IST" name="logoutFromPatientApp" finished-at="2026-07-23T15:13:35 IST" duration-ms="3388" status="FAIL">
+        <test-method is-config="true" signature="logoutFromPatientApp()[pri:0, instance:all.PatientBookingSlot@71e9ddb4]" started-at="2026-07-23T15:24:17 IST" name="logoutFromPatientApp" finished-at="2026-07-23T15:24:20 IST" duration-ms="3073" status="FAIL">
           <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[element click intercepted: Element <img _ngcontent-ng-c3368939892="" class="profile-avatar" src="profile-icon.svg"> is not clickable at point (1324, 36). Other element would receive the click: <div _ngcontent-ng-c3088559030="" class="modal-overlay ng-star-inserted">...</div>
-  (Session info: chrome=150.0.7871.181)
+              <![CDATA[element click intercepted: Element <img _ngcontent-ng-c3368939892="" class="profile-avatar" src="profile-icon.svg"> is not clickable at point (1516, 36). Other element would receive the click: <iframe allowtransparency="true" frameborder="0" width="100%" height="100%" src="https://api.razorpay.com/v1/checkout/public?traffic_env=production&amp;build=afa3662e035e66c495f2ddc21c6f030530870f53&amp;build_v1=da4ee3f43a28ad81dba8ed06daf899a4520c691f&amp;checkout_v2=1&amp;new_session=1&amp;rzp_device_id=1.1bb6d19770019cede6f5acb11fee63476946ca45.1784800382373.55576762&amp;unified_session_id=TGtwpyowmcMPxg" class="razorpay-checkout-frame" allow="otp-credentials; payment; clipboard-write; publickey-credentials-get https://api.razorpay.com; publickey-credentials-create 'self' https://api.razorpay.com; web-share; camera *; local-network-access 'none'; loopback-network 'none';" style="opacity: 1; height: 100%; position: relative; background: none; display: block; border: 0px transparent; margin: 0px; padding: 0px; z-index: 2; width: 100%;" cd_frame_id_="93c04c05d2e3b3d9f9b673dd2e0da304"></iframe>
+  (Session info: chrome=150.0.7871.130)
 Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [26c6587450154a77b9bb06118c9b6287, clickElement {id=f.FF39B79DDD56F1A8EE3B5430FA802DFD.d.C641BEB0204DCBB091A2A5548F5907F9.e.128}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.181, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\VIKRAM\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59018}, goog:processID: 17564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59018/devtoo..., se:cdpVersion: 150.0.7871.181, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (26c6587450154a77b9bb06118c9b6287)] -> xpath: //img[@class='profile-avatar']]
-Session ID: 26c6587450154a77b9bb06118c9b6287]]>
+Command: [981021b6b03af5a715008d56c683ae69, clickElement {id=f.F20104B3236C51087DBB8F9E26A1D84A.d.76210973ADC519F1CE5C549EF574A077.e.132}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.130, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\INNOVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51175}, goog:processID: 2600, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51175/devtoo..., se:cdpVersion: 150.0.7871.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (981021b6b03af5a715008d56c683ae69)] -> xpath: //img[@class='profile-avatar']]
+Session ID: 981021b6b03af5a715008d56c683ae69]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <img _ngcontent-ng-c3368939892="" class="profile-avatar" src="profile-icon.svg"> is not clickable at point (1324, 36). Other element would receive the click: <div _ngcontent-ng-c3088559030="" class="modal-overlay ng-star-inserted">...</div>
-  (Session info: chrome=150.0.7871.181)
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <img _ngcontent-ng-c3368939892="" class="profile-avatar" src="profile-icon.svg"> is not clickable at point (1516, 36). Other element would receive the click: <iframe allowtransparency="true" frameborder="0" width="100%" height="100%" src="https://api.razorpay.com/v1/checkout/public?traffic_env=production&amp;build=afa3662e035e66c495f2ddc21c6f030530870f53&amp;build_v1=da4ee3f43a28ad81dba8ed06daf899a4520c691f&amp;checkout_v2=1&amp;new_session=1&amp;rzp_device_id=1.1bb6d19770019cede6f5acb11fee63476946ca45.1784800382373.55576762&amp;unified_session_id=TGtwpyowmcMPxg" class="razorpay-checkout-frame" allow="otp-credentials; payment; clipboard-write; publickey-credentials-get https://api.razorpay.com; publickey-credentials-create 'self' https://api.razorpay.com; web-share; camera *; local-network-access 'none'; loopback-network 'none';" style="opacity: 1; height: 100%; position: relative; background: none; display: block; border: 0px transparent; margin: 0px; padding: 0px; z-index: 2; width: 100%;" cd_frame_id_="93c04c05d2e3b3d9f9b673dd2e0da304"></iframe>
+  (Session info: chrome=150.0.7871.130)
 Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.11'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [26c6587450154a77b9bb06118c9b6287, clickElement {id=f.FF39B79DDD56F1A8EE3B5430FA802DFD.d.C641BEB0204DCBB091A2A5548F5907F9.e.128}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.181, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\VIKRAM\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59018}, goog:processID: 17564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59018/devtoo..., se:cdpVersion: 150.0.7871.181, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (26c6587450154a77b9bb06118c9b6287)] -> xpath: //img[@class='profile-avatar']]
-Session ID: 26c6587450154a77b9bb06118c9b6287
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+Command: [981021b6b03af5a715008d56c683ae69, clickElement {id=f.F20104B3236C51087DBB8F9E26A1D84A.d.76210973ADC519F1CE5C549EF574A077.e.132}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.130, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\INNOVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51175}, goog:processID: 2600, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51175/devtoo..., se:cdpVersion: 150.0.7871.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (981021b6b03af5a715008d56c683ae69)] -> xpath: //img[@class='profile-avatar']]
+Session ID: 981021b6b03af5a715008d56c683ae69
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
 at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -91,17 +87,14 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 at jdk.proxy2/jdk.proxy2.$Proxy17.click(Unknown Source)
 at patientObjectRepository.PatientProfilePage.logoutPatient(PatientProfilePage.java:102)
 at genericUtilities.PatientBaseClass.logoutFromPatientApp(PatientBaseClass.java:86)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
 at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
@@ -115,45 +108,45 @@ at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInv
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
 at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
 at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
 at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-at java.base/java.lang.Thread.run(Thread.java:842)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
 ]]>
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutFromPatientApp -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:all.PatientBookingSlot@22fcf7ab]" started-at="2026-07-23T15:13:35 IST" name="closeBrowser" finished-at="2026-07-23T15:13:35 IST" duration-ms="497" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:all.PatientBookingSlot@71e9ddb4]" started-at="2026-07-23T15:24:20 IST" name="closeBrowser" finished-at="2026-07-23T15:24:20 IST" duration-ms="238" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- all.PatientBookingSlot -->
       <class name="all.DoctorAddingSlot">
-        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:all.DoctorAddingSlot@7530ad9c]" started-at="2026-07-23T15:11:38 IST" name="launchBrowser" finished-at="2026-07-23T15:11:40 IST" duration-ms="1831" status="PASS">
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:all.DoctorAddingSlot@757277dc]" started-at="2026-07-23T15:22:30 IST" name="launchBrowser" finished-at="2026-07-23T15:22:33 IST" duration-ms="2494" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method is-config="true" signature="loginToDoctorApp()[pri:0, instance:all.DoctorAddingSlot@7530ad9c]" started-at="2026-07-23T15:11:40 IST" name="loginToDoctorApp" finished-at="2026-07-23T15:11:51 IST" duration-ms="10920" status="PASS">
+        <test-method is-config="true" signature="loginToDoctorApp()[pri:0, instance:all.DoctorAddingSlot@757277dc]" started-at="2026-07-23T15:22:33 IST" name="loginToDoctorApp" finished-at="2026-07-23T15:22:43 IST" duration-ms="10454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToDoctorApp -->
-        <test-method signature="doctorAddingSlot()[pri:1, instance:all.DoctorAddingSlot@7530ad9c]" started-at="2026-07-23T15:11:51 IST" name="doctorAddingSlot" finished-at="2026-07-23T15:12:04 IST" duration-ms="13244" status="PASS">
+        <test-method signature="doctorAddingSlot()[pri:1, instance:all.DoctorAddingSlot@757277dc]" started-at="2026-07-23T15:22:43 IST" name="doctorAddingSlot" finished-at="2026-07-23T15:22:56 IST" duration-ms="12567" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doctorAddingSlot -->
-        <test-method is-config="true" signature="logoutFromDoctorApp()[pri:0, instance:all.DoctorAddingSlot@7530ad9c]" started-at="2026-07-23T15:12:04 IST" name="logoutFromDoctorApp" finished-at="2026-07-23T15:12:09 IST" duration-ms="4491" status="PASS">
+        <test-method is-config="true" signature="logoutFromDoctorApp()[pri:0, instance:all.DoctorAddingSlot@757277dc]" started-at="2026-07-23T15:22:56 IST" name="logoutFromDoctorApp" finished-at="2026-07-23T15:23:00 IST" duration-ms="4219" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutFromDoctorApp -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:all.DoctorAddingSlot@7530ad9c]" started-at="2026-07-23T15:12:09 IST" name="closeBrowser" finished-at="2026-07-23T15:12:09 IST" duration-ms="557" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:all.DoctorAddingSlot@757277dc]" started-at="2026-07-23T15:23:00 IST" name="closeBrowser" finished-at="2026-07-23T15:23:00 IST" duration-ms="239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

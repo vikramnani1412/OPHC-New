@@ -91,7 +91,45 @@
     <version>2.0.17</version>
 </dependency>
 
-    
 </dependencies>
+
+
+<build>
+    <plugins>
+        
+        
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>3.2.5</version>
+
+            <configuration>
+
+                <!-- TestNG Suite -->
+                <suiteXmlFiles>
+                    <suiteXmlFile>One_testng.xml</suiteXmlFile>
+                </suiteXmlFiles>
+
+                <!-- Optional JVM arguments -->
+                <argLine>-Dfile.encoding=UTF-8</argLine>
+
+                <!-- Don't fail if no tests are found -->
+                <failIfNoTests>false</failIfNoTests>
+
+                <!-- Print summary after execution -->
+                <printSummary>true</printSummary>
+
+                <!-- Reuse JVM -->
+                <reuseForks>true</reuseForks>
+
+                <!-- One JVM process -->
+                <forkCount>1</forkCount>
+
+            </configuration>
+        </plugin>
+
+    </plugins>
+</build>
+
   
 </project>
